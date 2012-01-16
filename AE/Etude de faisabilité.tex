@@ -1,0 +1,957 @@
+% This file was converted to LaTeX by Writer2LaTeX ver. 1.0.2
+% see http://writer2latex.sourceforge.net for more info
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{hhline}
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+\makeatother
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+%\title{Étude de faisabilité}
+%\author{Équipe GEI}
+%\date{16/01/2012}
+\begin{document}
+
+Référence : COPEVUE-MONIT / AE / Étude de Faisabilité
+
+Mise à jour : 16/01/2012
+
+Auteurs : 
+
+\begin{itemize}
+\item Sébastien Laurent
+\item Léo Lefebvre
+\item Pierre Lulé
+\item Jérémy Tuloup
+\end{itemize}
+
+Object : Présenter de manière succincte l’existant, ses points forts et
+ses faiblesses. Il doit présenter une étude de faisabilité par rapport
+aux technologies émergentes et fiables, et donner quelques pistes
+d’évolution.
+\newpage
+\tableofcontents
+\section{Introduction}
+Le COPEVUE (Comité pour la protection de l’EnVironnement de l’UE)
+souhaite étudier un système de monitoring à distance de sites isolés.
+Son rôle est de permettre le ravitaillement de stations-réservoirs de
+sites isolés.
+
+\section{Analyse de l’existant}
+\subsection{Analyse du métier}
+Orienté sur la gestion des différents sites isolés, la part métier de ce
+que l’on peut considérer comme existant se limite simplement à la
+connaissance des conditions d’accès aux sites.
+
+\subsection{Analyse des savoir-faire et des processus}
+\subsubsection{Surveillance des niveaux}
+Actuellement, la surveillance des différents lieux n’est basée sur aucun
+système automatisé. Le relevé, c’est-à-dire les mesures du niveau
+d’essence, d’eau ou de déchets selon le type de réservoir, sont faits
+manuellement par le propriétaire du lieu de travail. Ensuite, suivant
+le niveau constaté il avertit directement la société en charge de
+s’occuper du réservoir afin qu’elle vienne le remplir ou bien le vider.
+
+Il y a plusieurs inconvénients vis-à-vis de cette méthode. Tout d’abord,
+les relevés doivent être faits périodiquement, pour chaque réservoir,
+et mesurés manuellement. Outre le fait que cette tâche peut vite
+devenir lassante, elle est sujet à risques notamment à cause de la
+qualité de la mesure. De plus, les sociétés intervenantes sont
+seulement prévenues dans le cas du dépassement d’un seuil critique.
+Cela a de fortes chances d'entraîner des problèmes de
+logistique et d’optimisation des déplacements. 
+
+
+\subsubsection{Logistique et déplacements}
+Les différentes sociétés en charge de la maintenance des réservoirs sont
+donc prévenues à chaque fois que le propriétaire du lieu fait une
+demande de remplissage ou de vidage. Suite à cette demande, la société
+prépare et envoie un camion avec tous les équipements nécessaire pour
+réaliser cette demande au lieu dit.  Il n’y a donc aucune anticipation
+par rapport au signal donné par le propriétaire du lieu.
+
+Dans le cas où la société est à la charge de plusieurs sites, on
+remarque tout de suite que cette méthode n’est pas optimale. Les coûts
+de transports croient très vite, influençant directement la qualité de
+prestation, et créant ainsi de nouveaux risques environnementaux.
+
+\subsection{2.c. Analyse du matériel utilisé}
+Le relevé des niveaux se fait selon la façon du propriétaire du lieu
+par ses propres moyens, nous n’avons aucune information sur la
+précision, sur la qualité et sur la rigueur des mesures.
+
+Pour la demande de maintenance, le propriétaire du lieu utilise son
+téléphone pour appeler directement la société en charge (appel ou SMS)
+de l’intervention. Celle-ci apporte directement la marchandise par
+camion.
+
+\section{Étude de faisabilité}
+\subsection{Synthèse sur le système embarqué}
+Le système embarqué (ie : machine physique déployée sur site) doit être
+capable de gérer un réseau de capteurs local (filaire ou non) ainsi
+qu’une connexion distante lui permettant à la fois d’émettre des
+données, mais aussi d’en recevoir (pour procéder à une mise à jour par
+exemple). Le tout doit être autonome énergétiquement ce qui impose donc
+de dimensionner le système au plus près afin de limiter toute
+surconsommation inutile.
+
+La mise en place d’une solution “sur mesure”, c’est à dire de fabriquer
+sa propre carte mère électronique, serait trop coûteuse à la fois en
+terme de déploiement (étude préalable et fabrication d’une population
+trop faible pour amortir suffisamment les coûts) mais aussi en terme de
+développement logiciel à fournir par la suite.
+
+Il est donc essentiel d'utiliser des solutions
+existantes favorisant, sur le plan matériel, la modularité et la
+robustesse. En effet, la configuration risque de changer selon la
+nature du site, il est donc important de pouvoir choisir quels
+composants seront à implémenter. De même,
+l'environnement est aussi une variable à prendre en
+compte, et les appareils utilisés doivent être parfois aptes à
+fonctionner dans des conditions de température et
+d'humidité extrêmes.
+
+Dans le cadre de cette étude de faisabilité, nous avons examiné les
+produits Arduino, constructeur de circuits imprimés. Ce dernier propose
+à un tarif abordable une solution répondant à ces critères. Nous
+pouvons donc conclure qu'il existe actuellement sur le
+marchés de tels systèmes. Une étude de marchés plus approfondie sera
+cependant nécessaire pour effectuer un choix judicieux entre les divers
+fabriquants.
+
+\subsection{Synthèse sur la gestion de l’énergie}
+La problématique est complexe lorsqu’il s’agit de gérer l’accès à
+l’énergie dans des lieux isolés. Retenons qu’il est nécessaire
+d’alimenter à la fois chaque capteur mais aussi le système embarqué. La
+solution retenue dépendra donc, en principe, de l’implantation
+effective du site.
+
+
+
+
+\subsubsection{Cas 1 (raccordement filaire du réseau de capteurs) :}
+
+Pour ce type de sites, une unique batterie centralisée sera installée au
+niveau du système embarqué, reliée par la suite à chaque capteur au
+moyen de fils. Le raccordement à un coût unique de mise en oeuvre qui
+peut être amorti sur du moyen terme. Cette batterie pourra alors subir
+deux types de maintenances au choix : 
+
+\begin{enumerate}
+\item Remplacement de celle-ci par une batterie chargée par un opérateur
+de maintenance (opération régulière et facile mais coûteuse à la
+longue).
+\item Rechargement de celle-ci par un système de production adéquat ou
+un raccordement au réseau le cas échéant. Ce genre d’alimentation
+autonome devra être étudiée au cas par cas pour étudier sa rentabilité
+vis à vis du premier type de maintenance (à savoir le déplacement d’un
+opérateur).
+\end{enumerate}
+
+
+
+\subsubsection{Cas 2 (raccordement sans fil du réseau de capteurs) :}
+
+Pour les sites concernés, chaque capteur possède sa propre alimentation
+par batterie (piles). L’opération de changement et/ou rechargement de
+celles-ci à un coût important à long terme justifié par l’intervention
+régulière d’un opérateur (déplacement difficile). Il faut de plus noter
+que cette opération de maintenance n’a pas de lien systématique avec
+celle de livraison effectuée par camions et doit donc en être
+dissociée.
+
+\subsection{Synthèse sur les capteurs}
+
+Les capteurs que nous choisirons doivent pouvoir résister à des
+conditions extrêmes comme c’est le cas au Nord de la Norvège avec des
+températures pouvant atteindre les -80 °C !
+
+Nous devons donc sélectionner nos capteurs suivant plusieurs critères
+comme leur résistance aux hautes températures, à de fortes pression.
+Ils doivent également être résistant au substances mesurées (rouille ou
+corrosion pour de l’eau ou de l’essence).
+
+
+
+
+Pour notre système, il nous faudra trouver des capteurs et moyens
+permettant de détecter plusieurs paramètres
+
+\begin{itemize}
+\item mesurer les flux, 
+\item mesurer la températures et la pression des cuves ou du site pour
+assurer une bonne sécurité,
+\item détecter les incendie,
+\item détecter la présence d’intrus.
+\end{itemize}
+
+
+
+Après une recherche sur différents types de capteur et de moyens
+disponibles pour assurer ces fonctions nous avons dressé les résultats
+suivant :
+
+\emph{Remarque : dans les tableau qui suivent :}
+\begin{itemize}
+\item  “ :) “ signifie que le capteur répond au critère correspondant.
+\item  “ :( “ signifie que le capteur répond moyennement au critère
+correspondant.
+\item  “ :{\textgreater}( “ signifie que le capteur ne répond pas au
+critère correspondant.
+\end{itemize}
+
+\begin{flushleft}
+\tablehead{}
+\begin{supertabular}{|m{2.71cm}|m{1.308cm}|m{2.155cm}|m{1.8109999cm}|m{1.8369999cm}|m{2.816cm}|m{2.508cm}|}
+\hline
+Critères &
+Radar &
+Radar à impulsion guidées &
+Ultrason &
+Capacitif &
+Hydrostatique &
+Radiométrie\\\hline
+Matériaux solide &
+:) &
+:) &
+:) &
+:) &
+:{\textgreater}( &
+:{\textgreater}(\\\hline
+Matériaux liquide &
+:) &
+:) &
+:) &
+:) &
+:) &
+:)\\\hline
+Précision des mesures &
+:) &
+:) &
+:( &
+:( &
+:( &
+:)\\\hline
+Prix &
+:) &
+:) &
+:) &
+:) &
+:) &
+:)\\\hline
+Maintenance à réaliser &
+:) &
+:) &
+:( &
+:) &
+:) &
+:)\\\hline
+Résistances aux températures et pressions extrèmes &
+:) &
+:) &
+:) &
+:) &
+:) &
+:)\\\hline
+\end{supertabular}
+\end{flushleft}
+
+Table comparative des capteurs de niveau
+
+\begin{flushleft}
+\tablehead{}
+\begin{supertabular}{|m{2.843cm}|m{2.261cm}|m{2.552cm}|m{2.552cm}|m{2.552cm}|m{2.587cm}|}
+\hline
+~
+ &
+Capteurs de proximité capacitifs &
+Capteurs de proximité inductifs &
+Capteurs infra-rouges &
+Capteurs de détection par pression &
+Analyse d’image par caméra standard\\\hline
+Détection indépendante 
+
+ de la cible &
+:( &
+:( &
+:) &
+:) &
+:)\\\hline
+Grande distance de détection  &
+:( &
+:( &
+:) &
+:( &
+:)\\\hline
+Effet de la luminosité &
+:) &
+:) &
+:( &
+:) &
+:(\\\hline
+Effet de la température de la cible &
+:) &
+:) &
+:( &
+:) &
+:)\\\hline
+Prix &
+:) &
+:) &
+:) &
+:( &
+:(\\\hline
+\end{supertabular}
+\end{flushleft}
+
+Table comparative des capteurs pour la détection
+
+\begin{flushleft}
+\tablehead{}
+\begin{supertabular}{|m{5.303cm}|m{5.303cm}|m{5.339cm}|}
+\hline
+~
+ &
+Thermomètres infrarouges &
+Thermomètres à sonde (platine)\\\hline
+Prix &
+:( &
+:)\\\hline
+Connectique réseau &
+:) &
+:)\\\hline
+Gamme de températures extrêmes &
+:( &
+:)\\\hline
+Faible maintenance &
+:( &
+:)\\\hline
+\end{supertabular}
+\end{flushleft}
+
+Table comparative des capteurs pour la température
+
+\begin{flushleft}
+\tablehead{}
+\begin{supertabular}{|m{5.303cm}|m{5.303cm}|m{5.339cm}|}
+\hline
+~
+ &
+Baromètre numérique &
+Baromètre analogique\\\hline
+Prix &
+:) &
+:)\\\hline
+Résistances aux conditions extrêmes &
+:) &
+:(\\\hline
+Connectique pour analyse des données &
+:) &
+:(\\\hline
+Faible maintenance &
+:) &
+:(\\\hline
+Large gamme de pression mesurable &
+:) &
+:(\\\hline
+\end{supertabular}
+\end{flushleft}
+
+Table comparative des capteurs pour la pression
+
+Nos choix pour chaque catégorie se tourneront vers :
+
+\begin{description}
+\item[capteurs de niveau] : radar
+\item[capteurs pour la détection des sites normaux] : une combinaison de
+capteurs infra-rouges 
+\item[capteurs pour la détection des sites à risque] : une combinaison de
+capteurs infra-rouges et caméras
+\item[capteurs pour la température] : thermomètre à sonde
+\item[capteurs pour la pression] : baromètre numérique
+\end{description}
+
+\subsection{Synthèse sur les systèmes de communication}
+Le système de communication doit permettre de réaliser la liaison entre
+:
+
+\begin{itemize}
+\item Les capteurs et le système embarqué de la station.
+\item La station et le site distant.
+\end{itemize}
+Davantage d’informations sur les autres composantes du système de
+communication global sont disponibles en annexe.
+
+\subsubsection{Communication entre les capteurs et le système embarqué de la
+station}
+Le relevé des niveaux des réservoirs s’effectue à l’aide de capteurs (cf
+Partie Capteurs). Cette communication entre les capteurs et la station
+doit respecter plusieurs critères. Elle doit : 
+
+\begin{itemize}
+\item être adaptée à toute condition météorologique
+\item permettre de gérer les différents types de capteurs
+\item permettre de réaliser une connexion entre deux points situés à une
+centaine de mètre l’un de l’autre
+\item être fiable
+\item être économique
+\end{itemize}
+Cette communication peut donc être réalisée à l’aide d’une connexion
+filaire ou sans fil.
+
+Chacun des deux modes de connexion présente ses avantages et
+inconvénients. 
+
+Par exemple, la connexion sans fil permet de s’affranchir des
+contraintes de câblage et d'entretien des câbles, et
+permet au système embarqué d’être mobile. En revanche, il faut être
+capable de couvrir toute la zone, dans le cas où une solution axée sur
+la technologie Wi-fi est retenue. En effet les capteurs peuvent être
+distant de plusieurs dizaines de mètres les uns des autres.
+
+L’utilisation d’une connexion de type filaire permet en revanche
+d’assurer une meilleure fiabilité et un meilleur débit pour les
+transmissions d’information. De plus, c’est peut-être une solution
+moins coûteuse en terme d’infrastructure et elle est tout à fait
+envisageable. La distance entre un réservoir et le système embarqué
+n’est que d’une centaine de mètres au maximum. Mais elle ne respecte
+pas la contrainte d’entretien lié à l’exigence fonctionnelle des
+différents types de météo et climats possibles.
+
+\subsubsection{Communication entre la station et le site distant}
+Le système embarqué est chargé de faire parvenir les informations des
+différents niveaux de cuves et de réservoirs au serveur central. 
+
+Ces informations peuvent être envoyées simplement lorsque le besoin de
+remplir ou de vider une cuve se fait ressentir. Mais cela consistait à
+un des points faibles mis en valeur par l’étude de l’existant.
+
+Finalement il est préférable d’avoir un suivi en temps réel sur le
+niveau de toutes les cuves de chaque lieu, auquel cas le système devra
+à intervalles réguliers envoyer ses données. Toujours est-il qu’il doit
+y avoir une liaison entre le système et le serveur distant. 
+
+Cette liaison est également pilotée par plusieurs contraintes :
+
+\begin{itemize}
+\item La communication doit être possible depuis n’importe quel endroit
+du globe
+\item Elle doit supporter différentes conditions météorologique
+\item Elle doit être économique sur le plan de l’énergie
+\end{itemize}
+
+Cette liaison pourrait être de type filaire. Mais dans notre cas, de
+nombreux sites se situent dans des régions pratiquement inaccessibles.
+L’installation d’un réseau de communication filaire serait une
+contrainte énorme et engendrerait des coût dramatiquement élevés. 
+
+Une solution idéale et tout à fait envisageable est d’utiliser le réseau
+GSM (GPRS), qui permet de s’affranchir de toutes les contraintes
+précédentes.
+
+Plusieurs systèmes de ce type existent déjà et pourraient convenir à
+notre cas d’étude.
+
+\subsection{Synthèse sur systèmes de localisation}
+\subsubsection{Pour les agents de maintenance}
+La localisation des agents de maintenance la plus adaptée est la
+localisation par GPS, technique éprouvée et adaptée à un objet mobile.
+Sa précision et sa couverture à l’échelle mondiale permettent à un
+véhicule d’un agent de maintenance de rejoindre un site facilement.
+
+\subsubsection{Pour les sites}
+La meilleure solution pour les sites isolés est d’effectuer une
+géolocalisation (par GPS par exemple) à l’installation du site et de
+maintenir une base de donnée des positions des sites. En effet, la
+consommation électrique du GPS est trop importante pour être utilisable
+en permanence sur un site et est inutile dans le cas général car les
+sites sont immobiles.
+
+Il reste envisageable d’offrir exceptionnellement la possibilité d’un
+site mobile, localisé par GPS et bénéficiant d’un apport énergétique
+particulier.
+
+\subsection{Synthèse sur les OS}
+La partie software des système embarqués est extrêmement simple et n’a
+que deux besoins fonctionnels :
+
+\begin{itemize}
+\item Acquérir des données de capteurs
+\item Transmettre ces données
+\end{itemize}
+À côté de ceci, le système doit être absolument prédictible et fiable.
+Ceci nous oriente vers un système d’exploitation temps réel (RTOS).
+
+De ce fait, l’OS doit être le plus simple possible ou être complètement
+modulaire (micro-noyau).
+
+On peut d’emblée éliminer les systèmes complexes visant la compatibilité
+unix (comme LynxOS ou RTLinux).
+
+Le choix entre les RTOS adaptés (Enea OSE, QNX, VxWorks...) sera
+finalement intimement lié au choix du matériel.
+
+On remarque que les systèmes disponibles sur le marché sont rarement
+simple mais plus souvent modulaire. Du fait que la modularité augmente
+les risques de mauvaise fiabilité (un système modulaire ne peut être
+entièrement testé) il ne faut pas exclure non plus le développement
+d’un mini-OS parfaitement adapté.
+
+\section{Tendances / Choix}
+Globalement, la tendance dégagée est de chercher à allier la simplicité
+et la fiabilité. En effet, en situation «extrême», le meilleur choix
+est souvent le plus simple, celui qui ne nécessite pas trop de matériel
+et d’expertise.
+
+Cette tendance se retrouve à la fois dans :
+
+\begin{description}
+\item[le choix du système embarqué] : une simple carte aisément
+remplaçable
+\item[le choix de l’alimentation énergétique] : les piles et batteries
+sont facilement remplaçables et rechargeable, contrairement à un
+système du type panneau solaire qui entraînerait des surcoûts
+considérables en cas de remplacement.
+\item[le choix des capteurs] : un des principaux critère pour les
+capteurs est la résistance à une basse température
+\item[systèmes de communication] : le choix de système standard permet
+une plus grande simplicité de maintenance (une puce wifi défectueuse
+peut facilement être remplacée contrairement à un système de
+communication spécifique)
+\item[système de localisation] : la localisation des sites est la plus
+simple et la plus fiable : leurs coordonnées sont enregistrées. La
+localisation des agents de maintenance est la plus éprouvée : le GPS.
+\item[le choix de l’OS] : la simplicité et la fiabilité sont les deux
+critères les plus importants du choix de l’OS
+\end{description}
+
+\section{Conclusions}
+Un nouveau système automatisé permettrait une évolution positive
+concernant plusieurs points :
+
+\begin{description}
+\item[Fiabilité/Constance de l’acquisition de données] : Actuellement les
+niveaux sont relevés par le propriétaire des lieux. Une rationalisation
+des moyens d’acquisition rendrait plus homogènes entre elles les
+différentes mesures et ne dépendraient pas d’un facteur humain
+subjectif.
+\item[Rapidité de la transmission de données] : Le temps mis pour à la
+fois mesurer les niveaux des réservoirs, transmettre en cas de
+nécessité une demande à une société et chercher un agent de maintenance
+proche du lieu à traiter peut grandement être amélioré par un système
+automatique.
+\item[Anticipation] : une gestion centralisée de l’acquisition de données
+peut permettre une meilleurs anticipation des besoins des différents
+sites (prévoir à l’avance du moment où il faudra accéder à un site)
+\item[Optimisation des trajets] : La meilleur anticipation des besoins
+permet de limiter la quantité de trajets à effectuer (et donc le coût
+des maintenances). En effet, si on est capable d’anticiper les besoins
+de maintenance, on peut envoyer un agent de maintenance sur plusieurs
+sites en un trajet.
+\end{description}
+Cependant, tout cela se fait au prix d’un investissement de départ
+important, car une installation doit être faite sur tous les sites. De
+plus les sociétés de maintenance doivent toutes être équipées avec le
+système automatisé.
+
+Les enjeux principaux sont donc de limiter les coûts de la nouvelles
+solution tout en permettant d’améliorer la qualité, la rapidité et de
+baisser les coûts à long terme de la maintenance de ces sites.
+
+
+
+
+\section{Annexes}
+\subsection{Annexe 1 : Résultats étude de faisabilité}
+Il s’agit dans cette annexe de présenter les différents résultats
+détaillés des études, en proposant les références des diverses
+recherches effectuées.
+
+\subsubsection{Système embarqués}
+http://arduino.cc/
+
+Quelques caractéristiques globales des circuits imprimés Arduino :
+
+\begin{description}
+\item[Alimentation :] 12V
+\item[Connectivités compatibles :] ethernet, série, parallèle, wifi, gsm,
+usb, bluetooth
+\item[Dimension maximales :] 10cm x 6cm
+\item[Mémoire :] extensible
+\item[Environnement :] multi-plateforme
+\item[Particularité :] open source
+\item[Prix :] 150€
+\end{description}
+
+
+
+L’étendue de l’offre Arduino (une quinzaine de cartes différentes)
+permet de répondre au plus juste aux demandes liées aux particularités
+du site.
+
+\subsubsection{Production et gestion de l’énergie}
+Sur chaque site, on peut distinguer deux types d’appareils électroniques
+nécessitant une alimentation en énergie :
+\begin{itemize}
+\item les capteurs (plusieurs appareils en nombre limité fonctionnant
+généralement sur 4V à 12V)
+\item le système embarqué (appareil unique fonctionnant généralement en
+12V ou 24V)
+\end{itemize}
+
+En étudiant les diverses solutions actuellement disponibles (2011), on
+distingue trois types d’accès à l’énergie :
+
+\paragraph{par stockage : accumulateurs (pile, batterie, ...),
+condensateurs...}
+L’installation est aisée et peu coûteuse mais cette gestion de l’énergie
+nécessite une opération de maintenance régulière
+(changement/chargement) pouvant s’avérer coûteuse à la longue.
+
+\paragraph{par production autonome : énergies renouvelables (éolienne,
+photovoltaïque, turbine, …) nucléaire, énergies fossiles (gaz, pétrole,
+…)}
+Une telle gestion de l’énergie assure l’autonomie complète du site mais
+engendre généralement des coûts et/ou des travaux trop conséquents pour
+ce genre de projet.
+
+\paragraph{par convoyage : ERDF, ORES, ...}
+
+Le raccordement à un réseau existant à proximité du site constitue un
+accès standard à l’énergie mais se trouve mis à mal par le caractère de
+réclusion des sites engendrant ainsi des coûts élevés pour assurer la
+liaison.
+
+\subsubsection{Capteurs}
+Les capteurs que nous allons choisir doivent pouvoir résister à des
+conditions extrêmes comme c’est le cas au Nord de la Norvège.
+
+Nous devons donc sélectionner nos capteurs suivant leur résistance aux
+hautes températures, à de fortes pression. Ils doivent également être
+résistant au substances mesurées (rouille ou corrosion pour de l’eau ou
+de l’essence).
+
+Pour notre système, il nous faudra trouver des capteurs de niveau pour
+mesurer les flux, des capteurs de températures et pression pour assurer
+la sécurité de certaines cuves (à essence notamment), d’incendies, de
+présence d’intrus.
+
+\paragraph{Capteurs de niveau :}
+
+Il y a différents types de capteurs de niveau plus ou moins adaptés au
+produit mesuré :
+
+\begin{itemize}
+\item Radar
+\item Radar à impulsion guidées
+\item Ultrason
+\item Capacitif
+\item Hydrostatique
+\item Radiométrie
+\end{itemize}
+
+Enterprises fournissant ce genre de capteurs :
+\textbf{Vega}
+
+Lien :
+http://www.vega.com/fr/Mesure\_de\_niveau.htm
+
+Il y a beaucoup de capteurs de niveau ayant une grande résistance au
+températures extrêmes ( de - 200 à + 450 °C pour certains) et à de
+hautes pressions et avec peut d'entretien à faire. La
+précision de la mesure est de l’ordre de quelques millimètres.
+
+Les capteurs de cette entreprise sont adaptés à une utilisation
+industrielle, mais dans les exemples d’utilisation on peut les prendre
+pour la prévention des crues, alors ça doit être utilisable pour le
+projet.
+
+Il y a aussi des capteurs spécialisés pour la mesure d’eau, de farine...
+
+Adapté pour des mesures de niveau liquide et solide.
+
+\textbf{SensorTechnics}
+Lien : 
+http://sensortechnics.domainfactory-kunde.de/fr/produits/capteurs-et-pressostats-de-niveaux/capteurs-hydrostatiques-pour-la-mesure-de-niveaux-de-liquides/
+
+Capteurs globalement identiques à ceux de Vega.
+
+Globalement une alimentation pouvant aller de 10 et 36 V par capteurs
+avec des signaux de 0 à 20 mA en sortie à traiter (valeurs qui semblent
+être standard
+
+\textbf{Conclusion :}
+
+Sur marché, on trouve de nombreux capteurs de mesure de niveau
+s’adaptant à des mesures de produits liquides ou solides.
+
+De nombreuses sociétés offres des produits résistants aux conditions
+extrêmes en termes de températures et pression tout en offrant une
+bonne précision de l’ordre de quelques millimètres.
+
+En moyenne ces capteurs ont des besoins énergétiques de l’ordre de 10 à
+36 V pour des signaux de sorties de 0 à 20 mA.
+
+\paragraph{Détecteur de présence:}
+
+Plusieurs types de capteurs ou de moyens de détection sont envisageables
+:
+
+\textbf{Capteurs de proximité capacitifs}
+
+\begin{itemize}
+\item détection selon la structures de matériaux (surtout pour métaux)
+\item détection d’une distance 3 cm
+\end{itemize}
+
+Non adapté à notre cas
+
+\textbf{Capteurs de proximité inductifs}
+
+Détecte les matériaux conducteurs
+
+Non adapté à notre cas
+
+\textbf{Capteurs infra-rouges}
+
+\begin{itemize}
+\item détecte par infrarouge
+\item inconvénients : dépend de la luminosité, températures de la cible
+\end{itemize}
+Peut être adapté à notre cas
+
+\textbf{Capteurs de détection par pression}
+
+\begin{itemize}
+\item détecte quelque chose à l’endroit où est placé le capteur
+\item inconvénients : en placer plusieurs, ne pas être trop sensible
+\end{itemize}
+Peut être adapté à notre cas
+
+\textbf{Analyse d’image par webcam}
+\begin{itemize}
+\item demande une bonne luminosité
+\item beaucoup de données à traiter
+\item adapté pour les zones à haut risques de sécurité
+\end{itemize}
+Peut être adapté à notre cas
+
+Nous choisirons des capteurs infra-rouges pour détecter l’arrivée
+d’intrus notamment pour les sites stockant de l’essence.
+
+On pourra combiner ceux-ci avec des caméras genre webcam pour en
+améliorer la sécurité pour les lieux critiques.
+
+Coût moyens : entre 15 et 70 € par capteurs
+
+\paragraph{Capteurs de températures}
+
+\textbf{Thermomètres infrarouges}
+\begin{itemize}
+\item coûts élevés
+\end{itemize}
+\textbf{Thermomètres à sonde}
+
+http://www.proges.com/plug-and-track/surveillance-de-temperature-en-temp-reel/sondes-de-temperature-ethernet.html?gclid=CI-Dnqrcwq0CFaEhtAodADXrBA
+
+\begin{itemize}
+\item adaptés à plusieurs cas d’utilisation
+\item large gamme de mesures (-100 à + 200 °C)
+\item modèles compatibles sur réseau
+\end{itemize}
+
+Nous utiliserons des thermomètres à sondes bien adaptés à notre cas.
+
+\paragraph{Capteurs de mesure de pression}
+
+Il y a différents modèles de baromètre disponible sur le commerce.
+
+On peut en distinguer 2 types différents : numérique ou analogique.
+
+Nous choisirons le numériques qui est plus résistants aux conditions
+extrêmes de températures et sera plus adapté pour le traitement des
+données comparé à un analogique.
+
+\subsubsection{Systèmes de communication}
+Le système de communication regroupe :
+
+\begin{itemize}
+\item Les échanges entre les capteurs et le système embarqué (relevé de
+niveaux)
+\item La localisation des systèmes embarqués
+\item L’envoi d’informations sur les relevés de niveaux du système
+embarqué au serveur distant.
+\item La récupération des demandes d’intervention
+\item La localisation des agents de maintenance.
+\end{itemize}
+
+\paragraph{Relevé de niveaux}
+Le relevé des niveaux des réservoirs s’effectue à l’aide de capteurs (cf
+Partie Capteurs). Cette communication entre les capteurs et la station
+doit respecter plusieurs critères. Elle doit : 
+
+\begin{itemize}
+\item être adaptée à toute condition météorologique
+\item permettre de gérer les différents types de capteurs
+\item permettre de réaliser une connexion entre deux points situés à une
+centaine de mètre l’un de l’autre
+\item être fiable
+\item économique
+\end{itemize}
+Cette communication peut donc être réalisée à l’aide d’une connexion
+filaire ou sans fil.
+
+Chacun des deux modes de connexion présente ses avantages et
+inconvénients. 
+
+Par exemple, la connexion sans fil permet de s’affranchir des
+contraintes de câblage et d'entretien des câbles, et
+permet au système embarqué d’être mobile. En revanche, il faut être
+capable de couvrir toute la zone, dans le cas où une solution axée sur
+la technologie Wi-fi est retenue. En effet les capteurs peuvent être
+distant de plusieurs dizaines de mètres les uns des autres.
+
+L’utilisation d’une connexion de type filaire permet en revanche
+d’assurer une meilleure fiabilité et un meilleur débit pour les
+transmissions d’information. De plus, c’est peut-être une solution
+moins coûteuse en terme d’infrastructure et elle est tout à fait
+envisageable. La distance entre un réservoir et le système embarqué
+n’est que d’une centaine de mètres au maximum. Mais elle ne respecte
+pas la contrainte d’entretien lié aux différents types de météo et
+climats possibles.
+
+\paragraph{Localisation des systèmes embarqués}
+Il sera utile d’utiliser la technologie GPS afin de localiser le système
+embarqué (et donc le site), pour par exemple faciliter l’accès lors
+d’une intervention. 
+
+\subsubsection{Transmission des informations du système embarqué au serveur
+distant}
+Le système embarqué est chargé de faire parvenir les informations des
+différents niveaux de cuves et de réservoirs au serveur central. 
+
+Ces informations peuvent être envoyées simplement lorsque le besoin de
+remplir ou de vider une cuve se fait ressentir. Mais cela consistait à
+un des points faibles mis en valeur par l’étude de l’existant.
+
+Finalement il est préférable d’avoir un suivi en temps réel sur le
+niveau de toutes les cuves de chaque lieu, auquel cas le système devra
+à intervalles réguliers envoyer ses données. Toujours est-il qu’il doit
+y avoir une liaison entre le système et le serveur distant. 
+
+Cette liaison est également pilotée par plusieurs contraintes :
+
+\begin{itemize}
+\item La communication doit être possible depuis n’importe quel endroit
+du globe.
+\item Elle doit supporter différentes conditions météorologique
+\item Elle doit être économique sur le plan de l’énergie
+\end{itemize}
+Cette liaison pourrait être de type filaire. Mais dans notre cas, de
+nombreux sites se situent dans des régions pratiquement inaccessibles.
+L’installation d’un réseau de communication filaire serait une
+contrainte énorme et engendrerait des coût dramatiquement élevés. 
+
+Une solution idéale et tout à fait envisageable est d’utiliser le réseau
+GSM (GPRS), qui permet de s’affranchir de toutes les contraintes
+précédentes.
+
+Plusieurs systèmes de ce type existent déjà et pourraient convenir à
+notre cas d’étude.
+
+\paragraph{Récupération des demandes d’intervention}
+L’exploitation des données relatives aux différents sites peut se faire
+via l’utilisation d’un logiciel spécifique. 
+
+Chaque intervenant a accès à une interface de gestion des sites dont il
+est en charge. Pour chaque site, un tableau de bord permet de suivre
+l’ensemble des relevés, mesures, …
+
+Quand un besoin d’intervention est nécessaire pour un site, l’agence de
+maintenance est prévenue par l’intermédiaire de son interface de
+monitoring, mais peut être également informée par mail.
+
+\paragraph{Localisation et suivi des camions d’intervention}
+Chaque agent de maintenance intervenant va pouvoir être suivi à l’aide
+d’un système de localisation (cf Partie Systèmes de localisation). Cela
+va permettre de gérer les transports de manière plus efficace et
+d’éviter certains coûts liés aux déplacements inutiles. 
+
+La localisation peut se faire facilement en équipant le poids lourds
+d’un outil utilisant la technologie GPS par exemple, la difficulté
+reposant sur le système de gestion global. La position GPS reçue peut
+ainsi être communiquée au serveur central via le réseau GSM. 
+
+Pour cela, on remarque qu’un certains nombre de solutions sont déjà
+mises en oeuvre par différentes entreprises. Par exemple, la société
+ELOSystèmes conçoit des systèmes embarqués de gestion de poids lourds.
+Ce sont des systèmes simples à mettre en oeuvre.
+
+\subsubsection{Systèmes de localisation}
+Il y a deux éléments à géolocaliser : les agents de maintenance et les
+sites à rejoindre. Les contraintes sont :
+
+\begin{itemize}
+\item Localisation à l’échelle planétaire
+\item Précision permettant aux agents de maintenance de rejoindre les
+sites (donc au pire des cas 500m)
+\end{itemize}
+\paragraph{Systèmes existants}
+\begin{description}
+\item[Wifi et RFID] : La géolocalisation doit se faire à l’échelle
+planétaire, en zone peu accessible. Ceci élimine les localisations de
+type Wifi ou RFID qui n’offrent qu’une faible portée.
+\item[GPRS] : La localisation par le GPRS serait envisageable, cependant
+la précision offerte par ce système (10km dans le pire des cas) n’est
+pas suffisante.
+\item[GPS] : Le GPS offre une portée à l’échelle planétaire et une
+précision de 15 à 100m qui permet aux intervenants de rejoindre le site
+en cas de besoin.
+\end{description}
+\paragraph{Pour les agents de
+maintenance}
+Le GPS est évidemment approprié pour les agents de maintenances. Ce
+système est éprouvé pour les véhicules et bon marché. Sa consommation
+est raisonnable pour son installation dans un véhicule d’un agent de
+maintance.
+
+\paragraph{Pour les sites}
+Une localisation par GPS implique une consommation d’énergie non
+négligeable. Hors dans la plupart des cas il n’est pas nécessaire
+d’avoir une localisation dynamique, les sites sont immobiles. Il est
+donc préférable de n’effectuer une géolocalisation des sites à
+l’installation seulement et de conserver cette position. Cette première
+géolocalisation sera effectuée par GPS à la mise en place du site.
+
+Il faut aussi envisager la possibilité d’un site mobile, qui aurait
+alors besoin d’un apport énergétique particulier.
+
+
+\subsection{Annexe 2 : Bibliographie}
+\subsubsection{Systèmes embarqués}
+\begin{description}
+\item[Arduino :] http://www.arduino.cc/
+\end{description}
+\subsubsection{RTOS}
+\begin{description}
+\item[LynxOS :] http://www.lynuxworks.com/
+\item[RTLinux :] http://www.rtlinuxfree.com/
+\item[Enea OSE :] http://www.enea.com/software/products/rtos/ose/
+\item[QNX :] http://www.qnx.com/
+\item[VxWorks :] http://www.windriver.com/products/vxworks/
+\end{description}
+
+\subsubsection{Systèmes de communication}
+\begin{itemize}
+\item Présentation système de logistique pour Camion (ELOsystème)
+\end{itemize}
+
+\end{document}
+
