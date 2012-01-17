@@ -1,43 +1,32 @@
-% This file was converted to LaTeX by Writer2LaTeX ver. 1.0.2
-% see http://writer2latex.sourceforge.net for more info
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[french]{babel}
-\usepackage{amsmath}
-\usepackage{amssymb,amsfonts,textcomp}
-\usepackage{array}
-\usepackage{supertabular}
-\usepackage{hhline}
-\makeatletter
-\newcommand\arraybslash{\let\\\@arraycr}
-\makeatother
-\setlength\tabcolsep{1mm}
-\renewcommand\arraystretch{1.3}
-%\title{Étude de faisabilité}
-%\author{Équipe GEI}
-%\date{16/01/2012}
+
+\documentclass{mise_en_page}
+
+\responsable{Tristan Delizy}
+\redacteurs{Pierre LULÉ, Léo LEFEBVRE, Sebastien LAURENT, Jérémy TULOUP} % Optionnel
+
+\titre{Étude de faisabilité}
+\version{0.1}
+\objet{Présentation de manière succincte l’existant ; points forts et faiblesses ; pistes d'évolution}
+\etat{non relu} %draft, non relu, non validé, validé
+
 \begin{document}
 
-Référence : COPEVUE-MONIT / AE / Étude de Faisabilité
+\maketitle
 
-Mise à jour : 16/01/2012
+\begin{historique}
+    \histo{0.1}{xx/xx/2012}{Draft initial}
+\end{historique}
 
-Auteurs : 
+\newpage
 
-\begin{itemize}
-\item Sébastien Laurent
-\item Léo Lefebvre
-\item Pierre Lulé
-\item Jérémy Tuloup
-\end{itemize}
-
-Object : Présenter de manière succincte l’existant, ses points forts et
+Objet du document : Présenter de manière succincte l’existant, ses points forts et
 ses faiblesses. Il doit présenter une étude de faisabilité par rapport
 aux technologies émergentes et fiables, et donner quelques pistes
 d’évolution.
+
 \newpage
 \tableofcontents
+
 \section{Introduction}
 Le COPEVUE (Comité pour la protection de l’EnVironnement de l’UE)
 souhaite étudier un système de monitoring à distance de sites isolés.

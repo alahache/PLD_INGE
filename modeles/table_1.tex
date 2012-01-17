@@ -1,0 +1,42 @@
+% This template from http://www.vel.co.nz
+
+\documentclass[12pt]{article}
+
+\usepackage{booktabs} % Required for the \toprule, \midrule and \bottomrule lines
+\usepackage{float} % Places tables in the right place on page when you use the [H] argument
+
+\begin{document}
+
+\begin{table}[H]
+\begin{tabular}{l l l}
+\toprule
+\textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3}\\
+\toprule
+Row 1 - 1 & Row 1 - 2 & Row 1 - 3 \\
+Row 2 - 1 & Row 2 - 2 & Row 2 - 3 \\
+Row 3 - 1 & Row 3 - 2 & Row 3 - 3 \\
+\midrule
+Row 4 - 1 & Row 4 - 2 & Row 4 - 3 \\
+\bottomrule
+\end{tabular}
+\caption{Caption for the table.}
+\label{tab:table1}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{l l l}
+\toprule
+\textbf{Sample Site} & \textbf{Temperature ($^o$C)} & \textbf{Gradient ($^o$)}\\
+\toprule
+Shakespeare & 22 & 5\\
+Wenderholm & 25 & 12\\
+Coromandel & 18 & 9\\
+\midrule
+\textbf{Average} & \textbf{21.7} & \textbf{8.7}\\
+\bottomrule
+\end{tabular}
+\caption{Environmental variables for several sample sites.}
+\label{tab:env_var_sites}
+\end{table}
+
+\end{document}
