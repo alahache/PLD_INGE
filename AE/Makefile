@@ -1,6 +1,5 @@
 PDF=pdflatex -shell-escape
 RM=rm -rfv
-ECHO=@echo
 
 all: pdf
 
@@ -13,8 +12,8 @@ pdf:
 	fi
 
 mrproper: clean
-	${RM} *.dvi; ${RM} *.pdf
+	${RM} *.dvi *.pdf
 
 clean:
-	${RM} *.aux; ${RM} *.log; ${RM} *.toc; ${RM} *out; ${RM} *.pyg; ${RM} *glo; ${RM} *ist
+	${RM} *.aux *.log *.toc *.out *.pyg *.glo *.ist
 
