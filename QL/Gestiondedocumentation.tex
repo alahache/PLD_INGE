@@ -1,0 +1,1149 @@
+% This file was converted to LaTeX by Writer2LaTeX ver. 1.0.2
+% see http://writer2latex.sourceforge.net for more info
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{hhline}
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+\makeatother
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+\title{}
+\author{}
+\date{}
+\begin{document}
+\section[Dossier de gestion de la documentation]{Dossier de gestion de
+la documentation}
+
+\bigskip
+
+\subsection[1. Objectif de ce dossier]{1. Objectif de ce dossier}
+
+\bigskip
+
+\begin{flushleft}
+\tablehead{}
+\begin{supertabular}{|m{16.345cm}|}
+\hline
+documentation : ensemble de documents relatifs à un projet - notice -
+mode d’emploi - action de sélectionner, classer, utiliser ou diffuser
+des documents. (Source : Le Petit Larousse - 1994)\\\hline
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+Ce dossier a pour but d’organiser la gestion ainsi que la production de
+la documentation au sein du projet.
+
+
+\bigskip
+
+\subsection[2. Acteurs de la gestion de documentation]{2. Acteurs de la
+gestion de documentation}
+
+\bigskip
+
+Les différents acteurs sont :
+
+\begin{itemize}
+\item Le responsable qualité (chargé de la gestion de la documentation,
+de la vérification)
+\item Le(s) auteur(s) du document
+\item Le chef de projet
+\end{itemize}
+
+\bigskip
+
+\begin{flushleft}
+\tablehead{}
+\begin{supertabular}{|m{5.347cm}|m{10.621cm}|}
+\hline
+\centering ACTEUR &
+\centering\arraybslash RESPONSABILITES\\\hline
+Responsable qualité &
+\begin{itemize}
+\item diffusion homogène des outils de production de documents\item
+supervision du fonctionnement courant\item définition et respect des
+règles d’identification, de structuration et de classement\item
+contrôle de la cohérence et de l’homogénéité dans la gestion de la
+documentation du projet\item relecture pour commentaires et
+enrichissements éventuels\item contrôle de la conformité par rapport
+aux standards méthodologiques (contenu attendu du document) et aux
+règles de présentation et structuration des documents\end{itemize}
+\\\hline
+Auteur
+
+(un document peut être produit par plusieurs auteurs) &
+\begin{itemize}
+\item objectifs et contenu du document\item gestion des mises à jour et
+des versions-révisions successives du document\item sauvegarde du
+document\end{itemize}
+\\\hline
+Chef de Projet
+
+~
+ &
+\begin{itemize}
+\item relecture pour commentaires et enrichissements éventuels\item
+diffusion vers les destinataires identifiés du document\end{itemize}
+\\\hline
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+\subsection[3. Cycle de vie d’un document]{3. Cycle de vie d’un
+document}
+
+\bigskip
+
+Un document passe par un certain nombre d{\textquotesingle}états :
+
+\begin{flushleft}
+\tablehead{}
+\begin{supertabular}{|m{4.236cm}|m{11.733cm}|}
+\hline
+Etat &
+Signification\\\hline
+travail &
+le document est en cours d{\textquotesingle}élaboration par
+l{\textquotesingle}auteur\\\hline
+terminé &
+le document satisfait l{\textquotesingle}auteur; il est prêt à être
+diffusé\\\hline
+vérifié (optionnel) &
+le document est approuvé par d{\textquotesingle}autres membres de
+l{\textquotesingle}équipe, des intervenants extérieurs et/ou le
+contrôle qualité\\\hline
+validé &
+le document est approuvé par les personnes habilitées et prend valeur de
+référence au sein du projet\\\hline
+périmé &
+le document n’est plus adapté et est donc retiré à tous ses détenteurs
+(retrait d{\textquotesingle}usage)\\\hline
+archivage &
+le document n{\textquotesingle}est plus consulté régulièrement, mais une
+trace de son existence demeure (pour une durée définie par le chargé de
+gestion de la documentation du projet)\\\hline
+destruction &
+{}- le document n{\textquotesingle}est pas archivé ou
+
+{}- le délai d{\textquotesingle}archivage est écoulé\\\hline
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+\subsection[4. Identification et structure des documents]{4.
+Identification et structure des documents}
+\subsubsection[4.1. Identification]{4.1. Identification}
+Cette partie concerne l’identification des livrables.
+
+
+\bigskip
+
+Chaque livrable est identifié par une seule référence dans le projet,
+constituée de trois éléments:
+
+
+\bigskip
+
+nom\_du\_projet / nature\_de\_document / identification\_du\_document
+
+
+\bigskip
+
+nom\_du\_projet
+
+\begin{itemize}
+\item Le nom du projet est COPEVUE-MONIT
+\end{itemize}
+
+\bigskip
+
+nature\_de\_document
+
+\begin{itemize}
+\item Identifié selon le type du document rédigé. Il existe différents
+types pré-établis, mais vous pouvez si besoin en créer de nouveaux
+s’ils s’avèrent inexistants :
+\end{itemize}
+\begin{enumerate}
+\item GESTION : Documents relatifs à la Gestion de projet à destination
+du CdP
+\end{enumerate}
+\ \ \ \ \ \ → Dossier d’init ; Dossier de synthèse
+
+\begin{enumerate}
+\item QUALITE : Documments relatifs à l’assurance Qualité du projet
+\end{enumerate}
+\ \ \ \ \ \ → Gestion de doc ; PAQP ; BP1\&2
+
+\begin{enumerate}
+\item GLOSSAIRE : Documents relatifs au glossaire
+\end{enumerate}
+\ \ \ \ \ \ → Glossaire projet
+
+\ \ \ \ \ \ → Glossaire qualité
+
+\begin{enumerate}
+\item AE : Analyse Exploratoire
+\end{enumerate}
+→ Dossier d’étude de faisabilité
+
+\begin{enumerate}
+\item ABTNS : Analyse des Besoins Techniques du Nouveau Système
+\end{enumerate}
+→ STB
+
+\begin{enumerate}
+\item DNS : Définition du Nouveau Système / Conception
+\end{enumerate}
+→ Dossier de conception de nouveau système
+
+\begin{enumerate}
+\item DSE : Décomposition en Sous-Ensembles
+\item SI : Spécification des Interfaces
+\end{enumerate}
+→ Dossier d’interface de communication
+
+\begin{enumerate}
+\item CdC :  Cahier des Charges
+\end{enumerate}
+→ CdC
+
+
+\bigskip
+
+identification\_du\_document
+
+\begin{itemize}
+\item Identification claire du nom du projet. (Ex : Dossier
+d’Initalisation, PAQL)
+\end{itemize}
+
+\bigskip
+
+Les deux premiers éléments (nom\_du\_projet et nature\_de\_document)
+constitueront des dossiers physiques, alors que le troisième élément
+(identification\_du\_document) correspondra au nom physique du fichier.
+
+
+\bigskip
+
+\subsubsection[4.2. Structure]{4.2. Structure}
+Il est convenu que tout document doit comporter les éléments suivants
+sur la page de garde :
+
+\begin{itemize}
+\item le titre du document,
+\item la référence du document,
+\item la date de dernière mise à jour,
+\item le nom de l’auteur (ou des auteurs),
+\item l’objet du document (présentation rapide du contenu)
+\end{itemize}
+
+\bigskip
+
+D’autre part, sur chaque page du document préciser :
+
+\begin{itemize}
+\item le titre du document,
+\item la référence,
+\item le numéro de page / nombre de pages total.
+\end{itemize}
+
+\bigskip
+
+Pour chaque document, une Bibliographie doit figurer afin de répertorier
+toutes les sources et la gestion des versions
+
+\subsection[5. Gestion des révisions]{5. Gestion des révisions}
+
+\bigskip
+
+\begin{itemize}
+\item La gestion des révisions des drafts se fera via la plateforme
+Google Docs
+\end{itemize}
+\begin{itemize}
+\item La gestion des révisions des livrables se fera à l’aide du
+logiciel Git et de la plateforme github.
+\end{itemize}
+
+\bigskip
+
+\subsubsection[5.2. Utilisation de Google Docs]{5.2. Utilisation de
+Google Docs}
+Les auteurs des drafts devront posséder un compte sur Google afin de
+profiter des services offerts par l’outil Google Docs.
+
+
+\bigskip
+
+Google Docs propose directement une gestion automatique des révisions
+pour chaque document créé. Il propose également un outil de discussion
+instantanée intégré, ce qui permet une collaboration encore plus
+interactive.
+
+\subsubsection[5.2. Utilisation de github]{5.2. Utilisation de github}
+Les auteurs d’un document devront créer un compte sur le plateforme
+github : github.com 
+
+
+\bigskip
+
+Ensuite, il faudra que les auteurs rejoignent le dépôt suivant :
+https://github.com/alahache/PLD\_INGE
+
+
+\bigskip
+
+5.3. Utilisation de Git
+
+
+\bigskip
+
+L’utilisation de Git permettra d’effectuer un versionnage efficace des
+livrables. Pour installer Git sur ubuntu, il suffit de taper la
+commande :
+
+sudo apt-get install git
+
+
+\bigskip
+
+Afin d’en apprendre plus sur l’utilisation de Git, vous pourrez vous
+référer à l’Annexe n°B : Tutoriel d’utilisation de Git
+
+\subsection[6. Production des documents]{6. Production des documents}
+\subsubsection[6.1. Production des Drafts]{6.1. Production des Drafts}
+Les Drafts seront produits au moyen du service proposé par Google Docs.
+En effet, cet outil propose une collaboration instantanée entre les
+différents auteurs du document, ce qui permet d’accélérer
+significativement la production.
+
+\subsubsection[6.1. Production des Livrables]{6.1. Production des
+Livrables}
+\paragraph[6.1.a. Méthode de production planifiée]{6.1.a. Méthode de
+production planifiée}
+Les Livrables seront produits grâce à l’outil Latex, permettant une mise
+en forme automatique basée sur des règles de génération de documents
+pré-établies à l’avance.
+
+
+\bigskip
+
+Un fichier de mise en forme préalablement réalisé par le Responsable
+Qualité sera fourni avant la réalisation de chaque document.
+
+
+\bigskip
+
+Avantages de la mise en place de Latex :
+
+\begin{itemize}
+\item La rédaction est portée sur le contenu et non la mise en page du
+document
+\item Cette simplicité augmente la productivité
+\item Le format texte des document .tex permet un versionnage beaucoup
+plus efficace
+\item Le mode de production de Latex permet de générer automatiquement
+l’ensemble des documents en fichiers PDF prêts à être imprimés
+\end{itemize}
+
+\bigskip
+
+Installer latex sur windows :
+
+http://miktex.org/
+
+\paragraph[6.1.b. Risques engendrés]{6.1.b. Risques engendrés}
+L’utilisation de Latex, bien qu’apportant de nombreux avantages,
+présente également quelques risques :
+
+\begin{itemize}
+\item L’utilisation du langage Latex peut dérouter, voire rebuter
+certains rédacteurs
+\item Il convient d’utiliser un système adapté (linux, voire des
+logiciels spécifiques) afin de pouvoir rédiger en Latex
+\end{itemize}
+\paragraph[6.1.c. Méthode de production “de secours”]{6.1.c. Méthode de
+production “de secours”}
+Dans le cas où la méthode planifiée avec Latex ne porterai pas ses
+fruits, une génération des documents à l’aide d’un éditeur de texte
+classique (du type LibreOffice) sera préférée. Le choix final de la
+méthode de production sera effectué le plus tôt possible en fonction
+des résultats produits avec Latex.
+
+
+\bigskip
+
+Du fait du risque potentiel engendré par Latex, les résultats du choix
+de la méthode de production seront rapportés dans le dossier de Bilan
+FORMELLE, rédigé par le Responsable Qualité.
+
+\section[Annexes]{Annexes}
+\subsection[Annexe A : Modèle de rédaction d’un livrable en
+Latex]{Annexe A : Modèle de rédaction d’un livrable en Latex}
+\subsection[Vous devez posséder le fichier de mise en page
+“mise\_en\_page.cls” dans le même dosser que votre fichier .tex]{Vous
+devez posséder le fichier de mise en page “mise\_en\_page.cls” dans le
+même dosser que votre fichier .tex}
+
+\bigskip
+
+Un modèle basique de document tex utilisant ce modèle se résume à :
+
+\begin{flushleft}
+\tablehead{}
+\begin{supertabular}{|m{16.345cm}|}
+\hline
+{\textbackslash}documentclass\{mise\_en\_page\}
+
+~
+
+{\textbackslash}responsable\{...\}
+
+{\textbackslash}redacteurs\{...\} \% Optionnel
+
+{\textbackslash}titre\{Titre du document\}
+
+{\textbackslash}version\{0.1\}
+
+{\textbackslash}objet\{Description rapide du document\}
+
+{\textbackslash}etat\{draft\} \%draft, non relu, non validé, validé
+
+~
+
+{\textbackslash}begin\{document\}
+
+~
+
+{\textbackslash}maketitle
+
+~
+
+{\textbackslash}begin\{historique\}
+
+\ \ {\textbackslash}histo\{0.1\}\{xx/xx/2012\}\{Draft initial\}
+
+{\textbackslash}end\{historique\}
+
+~
+
+{\textbackslash}tableofcontents
+
+{\textbackslash}newpage
+
+~
+
+{\textbackslash}section\{Première partie\}
+
+~
+
+{\textbackslash}end\{document\}\\\hline
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+\subsection[Annexe B : Tutoriel d’utilisation de Git]{Annexe B :
+Tutoriel d’utilisation de Git}
+
+\bigskip
+
+\subsubsection[1 {}- Installation de Git]{1 - Installation de Git}
+
+\bigskip
+
+{}- Téléchargez et installez git :
+
+\ \ {\textgreater} sudo apt-get install git-core
+
+
+\bigskip
+
+
+\bigskip
+
+{}- Inscrivez-vous sur github :
+
+\ \ https://github.com/
+
+
+\bigskip
+
+
+\bigskip
+
+{}- Configurez git :
+
+\ \ {\textgreater} git config -{}-global user.name
+{\textquotedbl}alahache{\textquotedbl}
+
+\ \ {\textgreater} git config -{}-global user.email
+arnaud.lahache@gmail.com
+
+
+\bigskip
+
+
+\bigskip
+
+{}- Récupérez votre clé publique ssh :
+
+\ \ [http://help.github.com/linux-key-setup/]
+
+
+\bigskip
+
+\ \ \ \ Pour pouvoir vous connecter à github, le site utilise ssh et a
+besoin
+
+\ \ de votre clé publique RSA. Il suffit d{\textquotesingle}ajouter la
+clé publique sur la page
+
+\ \ {\textquotedbl}account{\textquotedbl} (https://github.com/account),
+dans la section {\textquotedbl}SSH Public Keys{\textquotedbl} :
+
+\ \ cliquez sur {\textquotedbl}add another public key{\textquotedbl} et
+copiez/collez le contenu de votre
+
+\ \ clé publique. Pour vérifier si vous avez déjà une clé publique,
+allez dans le
+
+\ \ répertoire \~{}/.ssh :
+
+
+\bigskip
+
+\ \ {\textgreater} cd \~{}/.ssh
+
+\ \ {\textgreater} ls
+
+
+\bigskip
+
+\ \ {}- Si le répertoire .ssh et les fichiers id\_rsa et id\_rsa.pub
+existent, vous
+
+\ \ avez donc déjà une clé publique. Copiez-collez donc le contenu de
+id\_rsa.pub dans
+
+\ \ la page citée plus haut
+
+
+\bigskip
+
+\ \ {}- Si le répertoire .ssh ou les fichiers
+n{\textquotesingle}existent pas, il faut génerer la clé :
+
+
+\bigskip
+
+\ \ {\textgreater} ssh-keygen -t rsa -C
+{\textquotedbl}arnaud.lahache@gmail.com{\textquotedbl}
+
+
+\bigskip
+
+\ \ Le programme voudra vous demander un fichier ou une passphrase, mais
+appuyez
+
+\ \ simplement sur {\textquotesingle}entrée{\textquotesingle} pour
+ignorer... Une fois la clé générée, copiez-collez le
+
+\ \ contenu de id\_rsa.pub sur la page citée plus haut.
+
+
+\bigskip
+
+\ \ {}- Pour tester que votre clé a bien été prise en compte, lancez la
+commande :
+
+
+\bigskip
+
+\ \ {\textgreater} ssh git@github.com
+
+
+\bigskip
+
+\ \ Si la connection vous retourne un message du type :
+
+
+\bigskip
+
+\begin{flushleft}
+\tablehead{}
+\begin{supertabular}{|m{16.345cm}|}
+\hline
+The authenticity of host {\textquotesingle}github.com
+(207.97.227.239){\textquotesingle} can{\textquotesingle}t be
+established.
+
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+
+Are you sure you want to continue connecting (yes/no)? yes\\\hline
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+\ \ Mettez {\textquotedbl}yes{\textquotedbl} puis appuyez sur
+{\textquotesingle}entrée{\textquotesingle}
+
+
+\bigskip
+
+\ \ Si vous voyez un message du type :
+
+
+\bigskip
+
+\begin{flushleft}
+\tablehead{}
+\begin{supertabular}{|m{16.345cm}|}
+\hline
+Hi alahache! You{\textquotesingle}ve successfully authenticated, but
+GitHub does not provide shell access.
+
+Connection to github.com closed.\\\hline
+\end{supertabular}
+\end{flushleft}
+
+\bigskip
+
+
+\bigskip
+
+\ \ Alors votre clé a bien été prise en compte.
+
+
+\bigskip
+
+
+\bigskip
+
+Pour créer un dépôt sur git : (pas très utile pour le projet)
+
+[http://help.github.com/creating-a-repo]
+
+
+\bigskip
+
+Pour forker le projet :
+
+[http://help.github.com/forking/]
+
+
+\bigskip
+
+\subsubsection[2 {}- Rejoindre le Dépôt]{2 - Rejoindre le Dépôt}
+
+\bigskip
+
+{}- Allez sur la page :
+
+\ \ https://github.com/alahache/PLD\_INGE
+
+\ \ \ \ et cliquez sur {\textquotedbl}Watch{\textquotedbl}
+
+
+\bigskip
+
+
+\bigskip
+
+{}- Placez-vous dans un dossier où vous souhaitez ajouter le dépôt :
+
+\ \ {\textgreater} mkdir PLD\_INGE
+
+\ \ {\textgreater} cd PLD\_INGE
+
+
+\bigskip
+
+
+\bigskip
+
+{}- Clonez le dépôt depuis l{\textquotesingle}adresse du repository :
+
+\ \ {\textgreater} git clone git@github.com:alahache/PLD\_INGE.git
+
+
+\bigskip
+
+\ \ Cette commande permet de récupérer le dépot se situant à
+l{\textquotesingle}adresse
+
+\ \ git@github.com:alahache/PLD\_INGE.git
+
+
+\bigskip
+
+
+\bigskip
+
+
+\bigskip
+
+3 - Utiliser git
+
+{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-
+
+
+\bigskip
+
+{}- Ajouter un nouveau fichier :
+
+\ \ {\textgreater} touch nouveau\_fichier
+
+\ \ {\textgreater} git add nouveau\_fichier
+
+
+\bigskip
+
+
+\bigskip
+
+{}- Ajouter tous les nouveaux fichiers :
+
+\ \ {\textgreater} git add .
+
+
+\bigskip
+
+
+\bigskip
+
+{}- Effectuer un commit local :
+
+\ \ {\textgreater} git commit -m {\textquotedbl}ajout du fichier
+nouveau\_fichier{\textquotedbl}
+
+
+\bigskip
+
+
+\bigskip
+
+{}- Voir quel est l{\textquotesingle}état en cours de votre dépôt local
+:
+
+\ \ (ex : fichiers pas encore ajoutés, fichiers édités, conflits, etc.)
+
+\ \ {\textgreater} git status
+
+
+\bigskip
+
+
+\bigskip
+
+{}- Uploader le dépot local sur github :
+
+\ \ [http://help.github.com/remotes/]
+
+\ \ Si c{\textquotesingle}est la première fois que vous voulez uploader
+(commande git push), faites :
+
+\ \ {\textgreater} git remote add origin
+git@github.com:alahache/PLD\_INGE.git
+
+
+\bigskip
+
+\ \ Cela permettera de pouvoir utiliser
+{\textquotedbl}origin{\textquotedbl} à la place de
+l{\textquotesingle}adresse complète
+
+\ \ {\textquotedbl}git@github.com:alahache/PLD\_INGE.git{\textquotedbl}
+à chaque fois que vous voulez faire
+
+\ \ un push.
+
+
+\bigskip
+
+\ \ {\textgreater} git push origin master
+
+\ \ Cette commande uploade la branche
+{\textquotedbl}master{\textquotedbl} (principale) vers le remote
+{\textquotedbl}origin{\textquotedbl}
+
+
+\bigskip
+
+\ \ ou tout simplement :
+
+\ \ {\textgreater} git push
+
+
+\bigskip
+
+
+\bigskip
+
+{}- Editer un fichier :
+
+\ \ Effectuez des modifications sur un fichier déjà ajouté précédemment
+(édition,
+
+\ \ suppression)...
+
+\ \ Puis utilisez la commande git commit avec l{\textquotesingle}option
+-a pour commiter automatiquement
+
+\ \ tous les fichiers modifiés :
+
+\ \ {\textgreater} git commit -a -m {\textquotedbl}modification,
+etc.{\textquotedbl}
+
+
+\bigskip
+
+\ \ Cela ne marche pas si vous venez de créer le fichier, il faut
+d{\textquotesingle}abord utiliser git add.
+
+
+\bigskip
+
+
+\bigskip
+
+{}- Mettre à jour le dépôt local :
+
+\ \ {\textgreater} git pull origin master
+
+\ \ Met à jour la branche master à partir du dépôt distant origin (cf.
+git remote)
+
+
+\bigskip
+
+
+\bigskip
+
+{}- Planifier la suppression d{\textquotesingle}un fichier :
+
+\ \ {\textgreater} git rm fichier\_a\_supprimer
+
+
+\bigskip
+
+[http://help.github.com/git-cheat-sheets/]
+
+\subsubsection[4 {}- Utilisation des branch]{4 - Utilisation des branch}
+
+\bigskip
+
+ {}- Créer une nouvelle branche (par exemple
+{\textquotedbl}dev{\textquotedbl})
+
+\ \ {\textgreater} git branch dev
+
+
+\bigskip
+
+ {}- Switcher vers la branche {\textquotedbl}dev{\textquotedbl}
+
+\ \ {\textgreater} git checkout dev
+
+
+\bigskip
+
+ {}- Effectuez des modifications sur {\textquotedbl}dev{\textquotedbl},
+effectuez un commit...
+
+\ \ {\textgreater} git commit -a -m
+{\textquotedbl}modifs...{\textquotedbl}
+
+
+\bigskip
+
+ {}- Envoyez les modifications vers GitHub via push (si la branche
+{\textquotedbl}dev{\textquotedbl} n{\textquotesingle}est pas sur
+GitHub) :
+
+\ \ {\textgreater} git push origin dev
+
+\ \ Ici push envoie les modifications vers le dépôt origin, vers la
+branche {\textquotedbl}dev{\textquotedbl}. Si la
+
+\ \ branche dev n{\textquotesingle}existe pas sur GitHub, elle sera
+créée.
+
+
+\bigskip
+
+ {}- Envoyez les modifications vers GitHub via push (a la suite) :
+
+\ \ {\textgreater} git push
+
+\ \ Même si vous êtes dans master, il envoiera également les
+modifications de {\textquotedbl}dev{\textquotedbl}
+
+
+\bigskip
+
+ {}- Revenir vers la branche master
+
+\ \ {\textgreater} git checkout master
+
+\ \ Vous remarquerez que vos modifications ne seront plus visibles
+
+
+\bigskip
+
+ {}- Fusionner la branche master avec les modiciations dans
+{\textquotedbl}dev{\textquotedbl}
+
+\ \ {\textgreater} git merge dev
+
+\ \ {\textgreater} git push
+
+
+\bigskip
+
+ {}- Récupérer les modifications de la branche
+{\textquotedbl}dev{\textquotedbl} dans la branche locale courante : (de
+
+ préférence {\textquotedbl}dev{\textquotedbl})
+
+\ \ {\textgreater} git pull origin dev
+
+
+\bigskip
+
+\subsubsection[5 {}- Aller plus loin]{5 - Aller plus loin}
+
+\bigskip
+
+{}- Gérer différentes branches dans un même dépot (pour par exemple
+faire des modifications expérimentales) :
+
+\ \ http://www.alexgirard.com/git-book/3\_usage\_basique\_des\_branches\_et\_des\_merges.html
+
+
+\bigskip
+
+{}- Pour plus d{\textquotesingle}informations - documentation très
+complète sur git :
+
+\ \ http://www.alexgirard.com/git-book/index.html
+
+
+\bigskip
+
+\subsection[Annexe C : Plans Types]{Annexe C : Plans Types}
+\subsubsection[1. Dossier d’étude de faisabilité]{1. Dossier d’étude de
+faisabilité}
+1. Introduction
+
+2. Analyse de l’existant
+
+\ \ 2.a. Analyse du métier
+
+\ \ 2.b. Analyse des savoir-faire et des processus
+
+\ \ 2.c. Analyse du matériel utilisé
+
+3. Etude de faisabilité
+
+\ \ 3.a. Synthèse sur système embarqué
+
+\ \ 3.b. Synthèse sur gestion de l’énergie
+
+\ \ 3.c. Synthèse sur capteurs
+
+\ \ 3.d. Synthèse systèmes de communication
+
+\ \ 3.e. Synthèse sur systèmes de localisation
+
+\ \ …
+
+4. Conclusions
+
+Annexe 1 : Résultats détaillés de l’étude de faisabilité
+
+\subsubsection[2. Dossier de spécification technique des besoins du
+système]{2. Dossier de spécification technique des besoins du système}
+Objectif du document : Présenter les axes de progrès envisagés sur le
+système existant, définir les exigences fonctionnelles et non
+fonctionnelles, de manière à répondre aux besoins du clients et à
+l’appel d’offre.
+
+1. Introduction
+
+2. Axes d’amélioration retenus
+
+\ \ 2.1. Axes de progrès retenus
+
+\ \ 2.2. Axes de progrès marginaux
+
+\ \ 2.3. Faux axes de progrès éventuels
+
+\ \ …
+
+3. Description des exigences non fonctionnelles de votre futur système
+
+4. Description des exigences fonctionnelles de votre futur système
+
+(parmi toutes les exigences non fonctionnelles du §3, montrer, pour
+chaque fonctionnalité, les exigences non fonctionnelles concernant
+cette fonctionnalité, en étant PLUS PRECIS (raffinement)
+
+5. Esquisse du système et impacts de la solution
+
+\ \ 5.1. Esquisse du système avant de faire la conception
+
+\ \ 5.2. Impacts de la solution
+
+6. Bilan des améliorations
+
+7. Conclusion
+
+\subsubsection[3. Dossier de conception du nouveau système]{3. Dossier
+de conception du nouveau système}
+Objectif : Proposer une solution (conception système, architecture...)
+qui réponde parfaitement aux exigences et à l’appel d’offre. Cette
+solution doit prendre en compte les cas nominaux mais aussi les cas
+non-nominaux (mode dégradé suite à des incidents).
+
+1. Introduction
+
+2. Organisation générale du système
+
+3. Règles de pilotage du système
+
+4. Architecture applicative
+
+5. Architecture informatique \& matérielle (techique)
+
+{}-{\textgreater} Ne pas oublier réseau de communication, les logiciels
+
+6. Réflexions sur les données
+
+(Modèles de données du système, modèles de la BDD intégrant les données
+de la production, volumétrie (évaluation de la BDD pour une entreprise
+type en s’appuyat sur réflexion de l’annexe 1, traffic sur le
+réseau...)
+
+7. Gestion des problèmes \& anomalies, sécurité
+
+8. Conclusion
+
+Annexe 1 : Représentation informatique des objets (messages...)
+
+Annexe 2 : Réflexion sur le réseau
+
+(principes qualité, pour la conception du réseau, description du réseau
+(logiciel, couches)
+
+Annexe 3 : Démarrage du système
+
+\subsubsection[4. Dossier d’interface de communication]{4. Dossier
+d’interface de communication}
+Objectif : Ce dossier doit présenter les interfaces (API) entre les
+différents “Sous-ensembles” du projet qui ont été définis lors de
+l’approche produit. On proposera 3 modélisations possibles de cette
+communication entre “Sous-ensemble” :
+
+\begin{itemize}
+\item Approche “urbanisation des SI” (blocs et sous-blocs)
+\item Approche objet sous forme de “Diagramme de collaboration” (Modèle
+UML)
+\item Approche diagramme de flux (SA/RT - Approche fonctionnelle)
+\end{itemize}
+1. Découpage du projet
+
+\ \ 1.1. Vue d’ensemble du projet (schéma montrant les relations)
+
+\ \ 1.2. Division en sous-ensembles (ou blocs)
+
+\ \ 1.3. Division en niveau inférieur (càd sous-sous-ensembles ou
+sous-blocs)
+
+2. Description de chacun des sous-ensembles
+
+\ \ 2.1. Sous-ensemble Machine-Outils
+
+\ \ \ \ 2.1.1. Sous-sous-ensemble X
+
+\ \ \ \ 2.1.2. Sous-sous-ensemble Y...
+
+\ \ 2.2. Sous-ensembles MOCN
+
+\ \ 2.3. ….
+
+3. Définition ces interfaces
+
+\ \ 3.1. Relation entre les sous-ensembles (ou en dessous)
+
+\ \ 3.2. Interfaces entre les sous-ensembles (ou en dessous)
+
+4. Description détaillée
+
+\ \ 4.1. Bloc Machine-Outils
+
+\ \ \ \ 4.1.1. Sous-sous-ensembles X
+
+\ \ \ \ 4.1.2. Sous-sous-ensembles Y
+
+\ \ 4.2. Bloc BDD
+
+\ \ 4.3. …
+
+
+\bigskip
+
+\subsubsection[5. Dossier de synthèse]{5. Dossier de synthèse}
+Objectif : Le dossier de synthèse a pour objectif de promouvoir le
+résultat de l’analyse et de la conception du futur système. Ce dossier
+s’adresse au comité de pilotage de la COPEVUE. Dans le cas de l’appel
+d’offre lancé par ce dernier, ce dossier de synthèse a pour but d’aider
+la décision du comité de pilotage quant à la décision de retenir la
+réponse proposée par notre société.
+
+1. Introduction
+
+\ \ 1.1. Cadre de l’étude et objectifs
+
+\ \ 1.2. Rappel synthétique des critiques de l’existant
+
+2. Présentation de la solution proposée
+
+\ \ 1.1. Architecture
+
+\ \ 1.2. Fonctionnelement général
+
+\ \ 1.3. Apports de la solution proposée
+
+\ \ \ \ 1.3.1. Thèmes de progrès
+
+\ \ \ \ 1.3.2. Coûts de la solution
+
+3. Mise en place du système
+
+\ \ 3.1. Description de la mise en place du système
+
+\ \ 3.2. Plan de formation
+
+\ \ 3.3. ROI
+
+4. Annexes
+
+\ \ 4.1. Organisation générale du système
+
+\ \ 4.2. ...
+\end{document}
