@@ -1,6 +1,5 @@
-% This file was converted to LaTeX by Writer2LaTeX ver. 1.0.2
-% see http://writer2latex.sourceforge.net for more info
-\documentclass{article}
+
+\documentclass{mise_en_page}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
@@ -9,46 +8,44 @@
 \usepackage{array}
 \usepackage{supertabular}
 \usepackage{hhline}
+
+\projet{Projet Ingéniérie}
+\equipe{H4314}
+\responsable{Tristan Delizy}
+\redacteurs{Arnaud Lahache} % Optionnel
+\titre{Gestion de la documentation}
+\version{1.2}
+\objet{Ce dossier a pour but d’organiser la gestion ainsi que la production de
+la documentation au sein du projet.}
+\etat{non validé} %draft, non relu, non validé, validé
+
 \makeatletter
 \newcommand\arraybslash{\let\\\@arraycr}
 \makeatother
 \setlength\tabcolsep{1mm}
 \renewcommand\arraystretch{1.3}
-\title{}
-\author{}
-\date{}
+
 \begin{document}
-\section[Dossier de gestion de la documentation]{Dossier de gestion de
-la documentation}
 
-\bigskip
+\maketitle
 
-\subsection[1. Objectif de ce dossier]{1. Objectif de ce dossier}
+\begin{historique}
+    \histo{1.0}{16/01/2012}{Draft initial}
+    \histo{1.1}{23/01/2012}{Corrections mineures}
+\end{historique}
 
-\bigskip
+\newpage
 
-\begin{flushleft}
-\tablehead{}
-\begin{supertabular}{|m{16.345cm}|}
-\hline
-documentation : ensemble de documents relatifs à un projet - notice -
+\tableofcontents
+
+\section{Introduction}
+
+\emph{documentation :} ensemble de documents relatifs à un projet - notice -
 mode d’emploi - action de sélectionner, classer, utiliser ou diffuser
-des documents. (Source : Le Petit Larousse - 1994)\\\hline
-\end{supertabular}
-\end{flushleft}
+des documents. (Source : Le Petit Larousse - 1994)
 
-\bigskip
-
-Ce dossier a pour but d’organiser la gestion ainsi que la production de
-la documentation au sein du projet.
-
-
-\bigskip
-
-\subsection[2. Acteurs de la gestion de documentation]{2. Acteurs de la
+\section{Acteurs de la
 gestion de documentation}
-
-\bigskip
 
 Les différents acteurs sont :
 
@@ -58,8 +55,6 @@ de la vérification)
 \item Le(s) auteur(s) du document
 \item Le chef de projet
 \end{itemize}
-
-\bigskip
 
 \begin{flushleft}
 \tablehead{}
@@ -97,12 +92,11 @@ diffusion vers les destinataires identifiés du document\end{itemize}
 \end{supertabular}
 \end{flushleft}
 
-\bigskip
 
-\subsection[3. Cycle de vie d’un document]{3. Cycle de vie d’un
-document}
 
-\bigskip
+\section{Cycle de vie d’un document}
+
+
 
 Un document passe par un certain nombre d{\textquotesingle}états :
 
@@ -139,26 +133,25 @@ destruction &
 \end{supertabular}
 \end{flushleft}
 
-\bigskip
 
-\subsection[4. Identification et structure des documents]{4.
-Identification et structure des documents}
-\subsubsection[4.1. Identification]{4.1. Identification}
+
+\section{Identification et structure des documents}
+\subsection{Identification}
 Cette partie concerne l’identification des livrables.
 
 
-\bigskip
+
 
 Chaque livrable est identifié par une seule référence dans le projet,
 constituée de trois éléments:
 
 
-\bigskip
+
 
 nom\_du\_projet / nature\_de\_document / identification\_du\_document
 
 
-\bigskip
+
 
 nom\_du\_projet
 
@@ -166,7 +159,7 @@ nom\_du\_projet
 \item Le nom du projet est COPEVUE-MONIT
 \end{itemize}
 
-\bigskip
+
 
 nature\_de\_document
 
@@ -220,7 +213,7 @@ du CdP
 → CdC
 
 
-\bigskip
+
 
 identification\_du\_document
 
@@ -229,16 +222,16 @@ identification\_du\_document
 d’Initalisation, PAQL)
 \end{itemize}
 
-\bigskip
+
 
 Les deux premiers éléments (nom\_du\_projet et nature\_de\_document)
 constitueront des dossiers physiques, alors que le troisième élément
 (identification\_du\_document) correspondra au nom physique du fichier.
 
 
-\bigskip
 
-\subsubsection[4.2. Structure]{4.2. Structure}
+
+\subsection{Structure}
 Il est convenu que tout document doit comporter les éléments suivants
 sur la page de garde :
 
@@ -250,7 +243,7 @@ sur la page de garde :
 \item l’objet du document (présentation rapide du contenu)
 \end{itemize}
 
-\bigskip
+
 
 D’autre part, sur chaque page du document préciser :
 
@@ -260,14 +253,14 @@ D’autre part, sur chaque page du document préciser :
 \item le numéro de page / nombre de pages total.
 \end{itemize}
 
-\bigskip
+
 
 Pour chaque document, une Bibliographie doit figurer afin de répertorier
 toutes les sources et la gestion des versions
 
-\subsection[5. Gestion des révisions]{5. Gestion des révisions}
+\section{Gestion des révisions}
 
-\bigskip
+
 
 \begin{itemize}
 \item La gestion des révisions des drafts se fera via la plateforme
@@ -278,38 +271,39 @@ Google Docs
 logiciel Git et de la plateforme github.
 \end{itemize}
 
-\bigskip
 
-\subsubsection[5.2. Utilisation de Google Docs]{5.2. Utilisation de
+
+\subsection{Utilisation de
 Google Docs}
 Les auteurs des drafts devront posséder un compte sur Google afin de
 profiter des services offerts par l’outil Google Docs.
 
 
-\bigskip
+
 
 Google Docs propose directement une gestion automatique des révisions
 pour chaque document créé. Il propose également un outil de discussion
 instantanée intégré, ce qui permet une collaboration encore plus
 interactive.
 
-\subsubsection[5.2. Utilisation de github]{5.2. Utilisation de github}
+\subsection{Utilisation de github}
 Les auteurs d’un document devront créer un compte sur le plateforme
 github : github.com 
 
 
-\bigskip
+
 
 Ensuite, il faudra que les auteurs rejoignent le dépôt suivant :
+
 https://github.com/alahache/PLD\_INGE
 
 
-\bigskip
-
-5.3. Utilisation de Git
 
 
-\bigskip
+\subsection{Utilisation de git}
+
+
+
 
 L’utilisation de Git permettra d’effectuer un versionnage efficace des
 livrables. Pour installer Git sur ubuntu, il suffit de taper la
@@ -318,34 +312,32 @@ commande :
 sudo apt-get install git
 
 
-\bigskip
+
 
 Afin d’en apprendre plus sur l’utilisation de Git, vous pourrez vous
 référer à l’Annexe n°B : Tutoriel d’utilisation de Git
 
-\subsection[6. Production des documents]{6. Production des documents}
-\subsubsection[6.1. Production des Drafts]{6.1. Production des Drafts}
+\section{Production des documents}
+\subsection{Production des drafts}
 Les Drafts seront produits au moyen du service proposé par Google Docs.
 En effet, cet outil propose une collaboration instantanée entre les
 différents auteurs du document, ce qui permet d’accélérer
 significativement la production.
 
-\subsubsection[6.1. Production des Livrables]{6.1. Production des
-Livrables}
-\paragraph[6.1.a. Méthode de production planifiée]{6.1.a. Méthode de
-production planifiée}
+\subsection{Production des livrables}
+\paragraph{Méthode de production planifiée}
 Les Livrables seront produits grâce à l’outil Latex, permettant une mise
 en forme automatique basée sur des règles de génération de documents
 pré-établies à l’avance.
 
 
-\bigskip
+
 
 Un fichier de mise en forme préalablement réalisé par le Responsable
 Qualité sera fourni avant la réalisation de chaque document.
 
 
-\bigskip
+
 
 Avantages de la mise en place de Latex :
 
@@ -359,13 +351,13 @@ plus efficace
 l’ensemble des documents en fichiers PDF prêts à être imprimés
 \end{itemize}
 
-\bigskip
+
 
 Installer latex sur windows :
 
 http://miktex.org/
 
-\paragraph[6.1.b. Risques engendrés]{6.1.b. Risques engendrés}
+\paragraph{Risques engendrés}
 L’utilisation de Latex, bien qu’apportant de nombreux avantages,
 présente également quelques risques :
 
@@ -375,8 +367,8 @@ certains rédacteurs
 \item Il convient d’utiliser un système adapté (linux, voire des
 logiciels spécifiques) afin de pouvoir rédiger en Latex
 \end{itemize}
-\paragraph[6.1.c. Méthode de production “de secours”]{6.1.c. Méthode de
-production “de secours”}
+\paragraph{Méthode de
+production <<de secours>>}
 Dans le cas où la méthode planifiée avec Latex ne porterai pas ses
 fruits, une génération des documents à l’aide d’un éditeur de texte
 classique (du type LibreOffice) sera préférée. Le choix final de la
@@ -384,21 +376,16 @@ méthode de production sera effectué le plus tôt possible en fonction
 des résultats produits avec Latex.
 
 
-\bigskip
+
 
 Du fait du risque potentiel engendré par Latex, les résultats du choix
 de la méthode de production seront rapportés dans le dossier de Bilan
 FORMELLE, rédigé par le Responsable Qualité.
 
-\section[Annexes]{Annexes}
-\subsection[Annexe A : Modèle de rédaction d’un livrable en
-Latex]{Annexe A : Modèle de rédaction d’un livrable en Latex}
-\subsection[Vous devez posséder le fichier de mise en page
-“mise\_en\_page.cls” dans le même dosser que votre fichier .tex]{Vous
-devez posséder le fichier de mise en page “mise\_en\_page.cls” dans le
+\section{Annexes}
+\subsection{Annexe A : Modèle de rédaction d’un livrable en Latex}
+\emph{Vous devez posséder le fichier de mise en page “mise\_en\_page.cls” dans le
 même dosser que votre fichier .tex}
-
-\bigskip
 
 Un modèle basique de document tex utilisant ce modèle se résume à :
 
@@ -454,36 +441,35 @@ Un modèle basique de document tex utilisant ce modèle se résume à :
 \end{supertabular}
 \end{flushleft}
 
-\bigskip
 
-\subsection[Annexe B : Tutoriel d’utilisation de Git]{Annexe B :
-Tutoriel d’utilisation de Git}
 
-\bigskip
+\subsection{Annexe B : Tutoriel d’utilisation de Git}
 
-\subsubsection[1 {}- Installation de Git]{1 - Installation de Git}
 
-\bigskip
+
+\subsection{Installation de Git}
+
+
 
 {}- Téléchargez et installez git :
 
 \ \ {\textgreater} sudo apt-get install git-core
 
 
-\bigskip
 
 
-\bigskip
+
+
 
 {}- Inscrivez-vous sur github :
 
 \ \ https://github.com/
 
 
-\bigskip
 
 
-\bigskip
+
+
 
 {}- Configurez git :
 
@@ -494,17 +480,17 @@ Tutoriel d’utilisation de Git}
 arnaud.lahache@gmail.com
 
 
-\bigskip
 
 
-\bigskip
+
+
 
 {}- Récupérez votre clé publique ssh :
 
 \ \ [http://help.github.com/linux-key-setup/]
 
 
-\bigskip
+
 
 \ \ \ \ Pour pouvoir vous connecter à github, le site utilise ssh et a
 besoin
@@ -524,14 +510,14 @@ allez dans le
 \ \ répertoire \~{}/.ssh :
 
 
-\bigskip
+
 
 \ \ {\textgreater} cd \~{}/.ssh
 
 \ \ {\textgreater} ls
 
 
-\bigskip
+
 
 \ \ {}- Si le répertoire .ssh et les fichiers id\_rsa et id\_rsa.pub
 existent, vous
@@ -542,19 +528,19 @@ id\_rsa.pub dans
 \ \ la page citée plus haut
 
 
-\bigskip
+
 
 \ \ {}- Si le répertoire .ssh ou les fichiers
 n{\textquotesingle}existent pas, il faut génerer la clé :
 
 
-\bigskip
+
 
 \ \ {\textgreater} ssh-keygen -t rsa -C
 {\textquotedbl}arnaud.lahache@gmail.com{\textquotedbl}
 
 
-\bigskip
+
 
 \ \ Le programme voudra vous demander un fichier ou une passphrase, mais
 appuyez
@@ -565,23 +551,23 @@ ignorer... Une fois la clé générée, copiez-collez le
 \ \ contenu de id\_rsa.pub sur la page citée plus haut.
 
 
-\bigskip
+
 
 \ \ {}- Pour tester que votre clé a bien été prise en compte, lancez la
 commande :
 
 
-\bigskip
+
 
 \ \ {\textgreater} ssh git@github.com
 
 
-\bigskip
+
 
 \ \ Si la connection vous retourne un message du type :
 
 
-\bigskip
+
 
 \begin{flushleft}
 \tablehead{}
@@ -597,18 +583,18 @@ Are you sure you want to continue connecting (yes/no)? yes\\\hline
 \end{supertabular}
 \end{flushleft}
 
-\bigskip
+
 
 \ \ Mettez {\textquotedbl}yes{\textquotedbl} puis appuyez sur
 {\textquotesingle}entrée{\textquotesingle}
 
 
-\bigskip
+
 
 \ \ Si vous voyez un message du type :
 
 
-\bigskip
+
 
 \begin{flushleft}
 \tablehead{}
@@ -621,36 +607,36 @@ Connection to github.com closed.\\\hline
 \end{supertabular}
 \end{flushleft}
 
-\bigskip
 
 
-\bigskip
+
+
 
 \ \ Alors votre clé a bien été prise en compte.
 
 
-\bigskip
 
 
-\bigskip
+
+
 
 Pour créer un dépôt sur git : (pas très utile pour le projet)
 
 [http://help.github.com/creating-a-repo]
 
 
-\bigskip
+
 
 Pour forker le projet :
 
 [http://help.github.com/forking/]
 
 
-\bigskip
 
-\subsubsection[2 {}- Rejoindre le Dépôt]{2 - Rejoindre le Dépôt}
 
-\bigskip
+\subsubsection{Rejoindre le Dépôt}
+
+
 
 {}- Allez sur la page :
 
@@ -659,10 +645,10 @@ Pour forker le projet :
 \ \ \ \ et cliquez sur {\textquotedbl}Watch{\textquotedbl}
 
 
-\bigskip
 
 
-\bigskip
+
+
 
 {}- Placez-vous dans un dossier où vous souhaitez ajouter le dépôt :
 
@@ -671,17 +657,17 @@ Pour forker le projet :
 \ \ {\textgreater} cd PLD\_INGE
 
 
-\bigskip
 
 
-\bigskip
+
+
 
 {}- Clonez le dépôt depuis l{\textquotesingle}adresse du repository :
 
 \ \ {\textgreater} git clone git@github.com:alahache/PLD\_INGE.git
 
 
-\bigskip
+
 
 \ \ Cette commande permet de récupérer le dépot se situant à
 l{\textquotesingle}adresse
@@ -689,20 +675,20 @@ l{\textquotesingle}adresse
 \ \ git@github.com:alahache/PLD\_INGE.git
 
 
-\bigskip
 
 
-\bigskip
 
 
-\bigskip
+
+
+
 
 3 - Utiliser git
 
 {}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-{}-
 
 
-\bigskip
+
 
 {}- Ajouter un nouveau fichier :
 
@@ -711,20 +697,20 @@ l{\textquotesingle}adresse
 \ \ {\textgreater} git add nouveau\_fichier
 
 
-\bigskip
 
 
-\bigskip
+
+
 
 {}- Ajouter tous les nouveaux fichiers :
 
 \ \ {\textgreater} git add .
 
 
-\bigskip
 
 
-\bigskip
+
+
 
 {}- Effectuer un commit local :
 
@@ -732,10 +718,10 @@ l{\textquotesingle}adresse
 nouveau\_fichier{\textquotedbl}
 
 
-\bigskip
 
 
-\bigskip
+
+
 
 {}- Voir quel est l{\textquotesingle}état en cours de votre dépôt local
 :
@@ -745,10 +731,10 @@ nouveau\_fichier{\textquotedbl}
 \ \ {\textgreater} git status
 
 
-\bigskip
 
 
-\bigskip
+
+
 
 {}- Uploader le dépot local sur github :
 
@@ -761,7 +747,7 @@ nouveau\_fichier{\textquotedbl}
 git@github.com:alahache/PLD\_INGE.git
 
 
-\bigskip
+
 
 \ \ Cela permettera de pouvoir utiliser
 {\textquotedbl}origin{\textquotedbl} à la place de
@@ -773,7 +759,7 @@ l{\textquotesingle}adresse complète
 \ \ un push.
 
 
-\bigskip
+
 
 \ \ {\textgreater} git push origin master
 
@@ -782,17 +768,17 @@ l{\textquotesingle}adresse complète
 {\textquotedbl}origin{\textquotedbl}
 
 
-\bigskip
+
 
 \ \ ou tout simplement :
 
 \ \ {\textgreater} git push
 
 
-\bigskip
 
 
-\bigskip
+
+
 
 {}- Editer un fichier :
 
@@ -810,16 +796,16 @@ l{\textquotesingle}adresse complète
 etc.{\textquotedbl}
 
 
-\bigskip
+
 
 \ \ Cela ne marche pas si vous venez de créer le fichier, il faut
 d{\textquotesingle}abord utiliser git add.
 
 
-\bigskip
 
 
-\bigskip
+
+
 
 {}- Mettre à jour le dépôt local :
 
@@ -829,23 +815,23 @@ d{\textquotesingle}abord utiliser git add.
 git remote)
 
 
-\bigskip
 
 
-\bigskip
+
+
 
 {}- Planifier la suppression d{\textquotesingle}un fichier :
 
 \ \ {\textgreater} git rm fichier\_a\_supprimer
 
 
-\bigskip
+
 
 [http://help.github.com/git-cheat-sheets/]
 
-\subsubsection[4 {}- Utilisation des branch]{4 - Utilisation des branch}
+\subsubsection{Utilisation des branch}
 
-\bigskip
+
 
  {}- Créer une nouvelle branche (par exemple
 {\textquotedbl}dev{\textquotedbl})
@@ -853,14 +839,14 @@ git remote)
 \ \ {\textgreater} git branch dev
 
 
-\bigskip
+
 
  {}- Switcher vers la branche {\textquotedbl}dev{\textquotedbl}
 
 \ \ {\textgreater} git checkout dev
 
 
-\bigskip
+
 
  {}- Effectuez des modifications sur {\textquotedbl}dev{\textquotedbl},
 effectuez un commit...
@@ -869,7 +855,7 @@ effectuez un commit...
 {\textquotedbl}modifs...{\textquotedbl}
 
 
-\bigskip
+
 
  {}- Envoyez les modifications vers GitHub via push (si la branche
 {\textquotedbl}dev{\textquotedbl} n{\textquotesingle}est pas sur
@@ -884,7 +870,7 @@ branche {\textquotedbl}dev{\textquotedbl}. Si la
 créée.
 
 
-\bigskip
+
 
  {}- Envoyez les modifications vers GitHub via push (a la suite) :
 
@@ -894,7 +880,7 @@ créée.
 modifications de {\textquotedbl}dev{\textquotedbl}
 
 
-\bigskip
+
 
  {}- Revenir vers la branche master
 
@@ -903,7 +889,7 @@ modifications de {\textquotedbl}dev{\textquotedbl}
 \ \ Vous remarquerez que vos modifications ne seront plus visibles
 
 
-\bigskip
+
 
  {}- Fusionner la branche master avec les modiciations dans
 {\textquotedbl}dev{\textquotedbl}
@@ -913,7 +899,7 @@ modifications de {\textquotedbl}dev{\textquotedbl}
 \ \ {\textgreater} git push
 
 
-\bigskip
+
 
  {}- Récupérer les modifications de la branche
 {\textquotedbl}dev{\textquotedbl} dans la branche locale courante : (de
@@ -923,11 +909,11 @@ modifications de {\textquotedbl}dev{\textquotedbl}
 \ \ {\textgreater} git pull origin dev
 
 
-\bigskip
 
-\subsubsection[5 {}- Aller plus loin]{5 - Aller plus loin}
 
-\bigskip
+\subsubsection{Aller plus loin}
+
+
 
 {}- Gérer différentes branches dans un même dépot (pour par exemple
 faire des modifications expérimentales) :
@@ -935,7 +921,7 @@ faire des modifications expérimentales) :
 \ \ http://www.alexgirard.com/git-book/3\_usage\_basique\_des\_branches\_et\_des\_merges.html
 
 
-\bigskip
+
 
 {}- Pour plus d{\textquotesingle}informations - documentation très
 complète sur git :
@@ -943,11 +929,10 @@ complète sur git :
 \ \ http://www.alexgirard.com/git-book/index.html
 
 
-\bigskip
 
-\subsection[Annexe C : Plans Types]{Annexe C : Plans Types}
-\subsubsection[1. Dossier d’étude de faisabilité]{1. Dossier d’étude de
-faisabilité}
+
+\subsection{Annexe C : Plans Types}
+\subsubsection{Dossier d’étude de faisabilité}
 1. Introduction
 
 2. Analyse de l’existant
@@ -976,8 +961,7 @@ faisabilité}
 
 Annexe 1 : Résultats détaillés de l’étude de faisabilité
 
-\subsubsection[2. Dossier de spécification technique des besoins du
-système]{2. Dossier de spécification technique des besoins du système}
+\subsubsection{Dossier de spécification technique des besoins du système}
 Objectif du document : Présenter les axes de progrès envisagés sur le
 système existant, définir les exigences fonctionnelles et non
 fonctionnelles, de manière à répondre aux besoins du clients et à
@@ -1013,8 +997,7 @@ cette fonctionnalité, en étant PLUS PRECIS (raffinement)
 
 7. Conclusion
 
-\subsubsection[3. Dossier de conception du nouveau système]{3. Dossier
-de conception du nouveau système}
+\subsubsection{Dossier de conception du nouveau système}
 Objectif : Proposer une solution (conception système, architecture...)
 qui réponde parfaitement aux exigences et à l’appel d’offre. Cette
 solution doit prendre en compte les cas nominaux mais aussi les cas
@@ -1052,8 +1035,7 @@ Annexe 2 : Réflexion sur le réseau
 
 Annexe 3 : Démarrage du système
 
-\subsubsection[4. Dossier d’interface de communication]{4. Dossier
-d’interface de communication}
+\subsubsection{Dossier d’interface de communication}
 Objectif : Ce dossier doit présenter les interfaces (API) entre les
 différents “Sous-ensembles” du projet qui ont été définis lors de
 l’approche produit. On proposera 3 modélisations possibles de cette
@@ -1105,9 +1087,9 @@ sous-blocs)
 \ \ 4.3. …
 
 
-\bigskip
 
-\subsubsection[5. Dossier de synthèse]{5. Dossier de synthèse}
+
+\subsubsection{Dossier de synthèse}
 Objectif : Le dossier de synthèse a pour objectif de promouvoir le
 résultat de l’analyse et de la conception du futur système. Ce dossier
 s’adresse au comité de pilotage de la COPEVUE. Dans le cas de l’appel
