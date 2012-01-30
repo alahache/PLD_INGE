@@ -1,6 +1,5 @@
-% This file was converted to LaTeX by Writer2LaTeX ver. 1.0.2
-% see http://writer2latex.sourceforge.net for more info
-\documentclass{article}
+
+\documentclass{mise_en_page}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
@@ -8,77 +7,30 @@
 \usepackage{amssymb,amsfonts,textcomp}
 \usepackage{array}
 \usepackage{hhline}
-\usepackage[pdftex]{graphicx}
-\title{}
-\author{}
-\date{}
+
+\projet{Projet Ingéniérie}
+\equipe{H4314}
+\responsable{Tristan Delizy}
+\titre{Dossier d'initialisation}
+\version{1.1}
+\objet{mise en place des phases et activités du projet.}
+\etat{validé} %draft, non relu, non validé, validé
+
 \begin{document}
-\section[Dossier d’initialisation (première phase)]{Dossier
-d’initialisation (première phase)}
-\section{projet ingénierie}
-Réponse à l’appel d’offre : “système de monitoring à distance de sites
-isolés”
 
-INSA - département informatique, 4ème année
+\maketitle
 
-Nature du document : Gestion
+\begin{historique}
+    \histo{1.0}{16/01/2012}{Draft initial}
+    \histo{1.1}{23/01/2012}{Finalisation}
+    \histo{1.2}{30/01/2012}{Validation}
+\end{historique}
 
-Auteur : Tristan Delizy
+\newpage
 
-Objet : mise en place des phases et activités du projet.
+\tableofcontents
 
-Date de dernière mise à jour : 15 janv. 2012
-
-\section[Sommaire]{Sommaire}
-I Contexte
-
-II Objetctif du projet
-
-\begin{enumerate}
-\item \begin{enumerate}
-\item objectif du projet
-\item rappel des exigences
-\end{enumerate}
-\end{enumerate}
-III Phasage du projet
-
-IV Livrables première partie
-
-\begin{enumerate}
-\item \begin{enumerate}
-\item dossier de gestion de la documentation
-\item relevé de décisions
-\item fiche d’argumentation commerciale
-\item procédure d’aide à la décomposition d’un système en sous-systèmes
-\item best-practice : aide à la rédaction d’une procédure
-\item draft approche produit au niveau système
-\item dossier n°1
-\item dossier n°2
-\end{enumerate}
-\end{enumerate}
-V Tâches et activités
-
-\begin{enumerate}
-\item \begin{enumerate}
-\item phase d’initialisation
-\item phase d’étude de faisabilité
-\item phase de spécifications techniques des besoins
-\item phase de synthèse de la solution
-\end{enumerate}
-\end{enumerate}
-VI Organisation de l’équipe
-
-VII Risques
-
-\begin{enumerate}
-\item \begin{enumerate}
-\item risques inhérents à la gestion de projet
-\item risques spécifiques
-\end{enumerate}
-\end{enumerate}
-VIII Planning
-
-\subsection[I Contexte]{I Contexte}
+\section{Contexte}
 \ \ L’Union Européenne possède de vastes territoires et certains sites
 sont isolés difficiles d’accès et possèdent un climat extrême. Le
 Comité pour la Protection de l’EnVironnement de l’UE (COPEVUE) à émis
@@ -110,7 +62,7 @@ robuste, proposant une solution innovante apte à répondre aux besoins
 du COPEVUE dans des délais relativement courts en maîtrisant les coûts
 de l’étude et ceux de la réalisation.
 
-\subsection[II Objectif du projet]{II Objectif du projet}
+\section{Objectif du projet}
 Le travail réalisé durant ce projet par l’ensemble du groupe d’étude que
 nous constituons est de réaliser un système permettant le monitoring de
 sites isolés dans l’union européenne. le COPEVUE fournit dans son appel
@@ -130,7 +82,7 @@ pour la protection de l’EnVironnement de l’UE (COPEVUE) sous
 l’identification “COPEVUE.2011.11.03.B”, rédigé par Mr Marian Scuturici
 et approuvé par Mr Regis Aubry.
 
-\subsubsection[rappel des exigences]{rappel des exigences}
+\subsection{rappel des exigences}
 Le système proposé pour répondre à l’appel d’offre devra fournir les
 fonctions suivantes : 
 
@@ -144,20 +96,20 @@ fonctions suivantes :
 \item Logistique / optimisation des opérations
 \item Aide à la décision.
 \end{itemize}
-\subsection[III Phasage du projet]{III Phasage du projet}
+\section{Phasage du projet}
 \ \ Les phases proposées ici correspondent à la première partie du
 projet, jusqu’à la revue intermédiaire. Elles concernent l’équipe aux
 complet et se décomposent en tâches à effectuer, décrite dans la
 section V (Tâches et activités) de ce document.
 
-\subsubsection[PHASE 1 : INITIALISATION]{PHASE 1 : INITIALISATION}
+\subsection[PHASE 1 : INITIALISATION]{PHASE 1 : INITIALISATION}
 \ \ Phase préliminaire du projet, basée sur la présentation en
 amphithéatre et l’assistance par rôle en semaines 49 et 50. L’objectif
 de cette phase est de préparer le travail de tous, de donner un cadre à
 la rédaction des différents dossiers et d{\textquotesingle}appréhender
 les moyens techniques existants déjà mis en oeuvre.
 
-\subsubsection[PHASE 2 : ETUDE DE FAISABILITE]{PHASE 2 : ETUDE DE
+\subsection[PHASE 2 : ETUDE DE FAISABILITE]{PHASE 2 : ETUDE DE
 FAISABILITE}
 \ \ Cette deuxième phase est à but explorative pour le groupe d’étude
 informatique qui doit soulever les différents problèmes à résoudre pour
@@ -165,7 +117,7 @@ répondre à l’appel d’offre. Durant cette phase le responsable qualité
 et le chef de projet continuent le travail de balisage du projet et
 mettent en place des outils de gestion de projet ou de suivi qualité.
 
-\subsubsection[PHASE 3 : SPECIFICATION TECHNIQUE DES BESOINS]{PHASE 3 :
+\subsection[PHASE 3 : SPECIFICATION TECHNIQUE DES BESOINS]{PHASE 3 :
 SPECIFICATION TECHNIQUE DES BESOINS}
 \ \ La troisième phase correspond à la rédaction de livrables pour le
 chef de projet, le groupe d’étude informatique doit quand à lui
@@ -175,26 +127,20 @@ l’élaboration du plan d’assurance qualité logicielle. Cette phase
 permet de cerner, non plus le projet ou le domaine d’application, mais
 bien la solution apportée à l’appel d’offre.
 
-\subsubsection[PHASE 4 : SYNTHESE DE LA SOLUTION]{PHASE 4 : SYNTHESE DE
+\subsection[PHASE 4 : SYNTHESE DE LA SOLUTION]{PHASE 4 : SYNTHESE DE
 LA SOLUTION}
 \ \ Dernière phase de la première partie du projet (avant la revue
 intermédiaire) la phase de synthèse de la solution correspond à la
 finalisation des différents documents et à l’approfondissement de
 l’étude de la solution répondant à l’appel d’offre.
 
-\subsection[]{}
-\subsection[]{}
-\subsection[]{}
-\subsection[]{}
-\subsection[]{}
-\subsection[]{}
-\subsection[IV Livrables première partie]{IV Livrables première partie}
+\section[Livrables première partie]{Livrables première partie}
 Cette section regroupe une description rapide des différents livrables
 de la première partie du projet ingénierie 4IF, concernant la réponse à
 l’appel d’offre émis par COPEVUE. Sont présentés ici les principaux
 documents avec leur sommaire le cas échéant.
 
-\subsubsection[Dossier de gestion de la documentation]{Dossier de
+\subsection[Dossier de gestion de la documentation]{Dossier de
 gestion de la documentation}
 \paragraph[description générale]{description générale}
 Ce dossier a pour but d’organiser la gestion ainsi que la production de
@@ -209,7 +155,7 @@ la documentation au sein du projet.
 \item gestion des révisions
 \item production de documents
 \end{enumerate}
-\subsubsection[Relevé de décisions]{Relevé de décisions}
+\subsection[Relevé de décisions]{Relevé de décisions}
 \paragraph[description générale]{description générale}
 \ \ Document bilan permettant de retracer et justifier les choix
 (technologiques, architecturaux, etc...) de l’équipe au cours du
@@ -222,7 +168,7 @@ projet. document à vocation interne.
 \item Séance 2
 \item Séance 3
 \end{enumerate}
-\subsubsection[Fiche d’argumentation commerciale]{Fiche d’argumentation
+\subsection[Fiche d’argumentation commerciale]{Fiche d’argumentation
 commerciale}
 \paragraph[description générale]{description générale}
 \ \ La fiche d’argumentation commerciale est un livrable présentant de
@@ -232,7 +178,7 @@ en aucun cas pour but de résumer les dossiers techniques qu’elle
 accompagne, mais elle s’axe surtout autour de l’aspect commercial du
 produit.
 
-\subsubsection[Procédure d’aide à la décomposition d’un système en
+\subsection[Procédure d’aide à la décomposition d’un système en
 sous{}-systèmes]{Procédure d’aide à la décomposition d’un système en
 sous-systèmes}
 \paragraph[description générale]{description générale}
@@ -253,7 +199,7 @@ qualité “aide à la rédaction d’une procédure”.
 \item Logigramme de la procédure
 \item Tableau de définition des actions
 \end{enumerate}
-\subsubsection[Best{}-practice : Aide à la réalisation d’une
+\subsection[Best{}-practice : Aide à la réalisation d’une
 procédure]{Best-practice : Aide à la réalisation d’une procédure}
 \paragraph[description générale]{description générale}
 \ \ Définir les règles de rédaction d’une procédure devant intégrer le
@@ -269,7 +215,7 @@ procédure d’aide à la décomposition d’un système en sous-systèmes.
 \item contenu d’une procédure
 \item gestion du document
 \end{enumerate}
-\subsubsection[Dossier n°1]{Dossier n°1}
+\subsection[Dossier n°1]{Dossier n°1}
 \paragraph[description générale]{description générale}
 \ \ Premier dossier de retour de l’appel d’offre, ce dossier décrit la
 première approche du projet, détaillant les solutions existantes, il
@@ -299,7 +245,8 @@ fur et a mesure de l’avancement du projet.
 \item Décomposition du système en sous systèmes
 \item Etude des exigences de manière modulaire
 \end{enumerate}
-\subsection[V Tâches et activités]{V Tâches et activités}
+
+\section{Tâches et activités}
 \ \ Description des tâches à réaliser dans chaque phases du projet. La
 numérotation applique le standard T.[n° phase].[n° tâche].[sous-tâche].
 
@@ -384,7 +331,7 @@ sous-systèmes”
 \item ébauche du dossier de synthèse
 \item finalisation de la fice d’argumentation commerciale
 \end{enumerate}
-\subsection[VI Organisation de l’équipe]{VI Organisation de l’équipe}
+\section{Organisation de l’équipe}
 \ \ L’équipe du projet se compose de six personnes, un chef de projet
 chargé de la conduite et de la gestion du projet, un responsable
 qualité, chargé de mener à bien la démarche qualité concernant ce
@@ -405,7 +352,7 @@ Groupe d’Etude Informatique (GEI) :
 \item Léo Lefebvre
 \item Sébastien Laurent
 \end{itemize}
-\subsection[VII Risques]{VII Risques}
+\section{Risques}
 En tant que chef de projet, il est important
 d{\textquotesingle}appréhender la notion de risque attenante au projet.
 Sont présentés ici les risques principaux que notre équipe ou le projet
@@ -422,7 +369,7 @@ l’activité de mener ce type de projets, et les risques liés à la
 solution que nous allons mettre en place pour copevue, à son
 développement ou a son exploitation.
 
-\subsubsection[Risques inhérents aux activités de gestion de
+\subsection[Risques inhérents aux activités de gestion de
 projet]{Risques inhérents aux activités de gestion de projet}
 \ \ Certains risques apparaissent en même temps que la décision de
 répondre à un appel d’offre, et ne peuvent être ni négligés, ni
@@ -441,7 +388,7 @@ rapidement
 \item Le contexte économique peut ne plus être favorable au projet
 \item Espionnage industriel
 \end{itemize}
-\subsubsection[Risques dépendants de la solution applicative]{Risques
+\subsection[Risques dépendants de la solution applicative]{Risques
 dépendants de la solution applicative}
 \ \ D’autres risques apparaissent tout au long du cycle de vie du
 projet, de sa conception à l’exploitation, différents risques sont liés
@@ -458,7 +405,7 @@ projet
 \item Sous estimation des risques liés à la réalisation (accidents du
 travail, aléas climatiques)
 \end{itemize}
-\subsection[VIII Planning]{VIII Planning}
+\section{Planning}
 
 \includegraphics[width=14.579cm,height=20.876cm]{Dossierdinitialisationgestion-img1.png}
 
