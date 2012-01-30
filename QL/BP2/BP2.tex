@@ -1,6 +1,5 @@
-% This file was converted to LaTeX by Writer2LaTeX ver. 1.0.2
-% see http://writer2latex.sourceforge.net for more info
-\documentclass{article}
+
+\documentclass{mise_en_page}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
@@ -9,39 +8,44 @@
 \usepackage{array}
 \usepackage{supertabular}
 \usepackage{hhline}
-\usepackage[pdftex]{graphicx}
+
 \makeatletter
 \newcommand\arraybslash{\let\\\@arraycr}
 \makeatother
 \setlength\tabcolsep{1mm}
 \renewcommand\arraystretch{1.3}
-\title{}
-\author{}
-\date{}
-\begin{document}
-\section{BEST PRACTICE N°2}
-\subsection{Aide à la rédaction d’un CdC Logiciel}
 
-\bigskip
-
-
-\bigskip
-
-Objectif de ce document : Définir les règles de bonnes pratiques dans le
+\projet{Projet Ingéniérie}
+\equipe{H4314}
+\responsable{Tristan Delizy}
+\redacteurs{Arnaud Lahache} % Optionnel
+\titre{Best Practice 2 : Aide à la rédaction d’un CdC Logiciel}
+\version{1.3}
+\objet{Ce dossier a pour but de définir les règles de bonnes pratiques dans le
 cadre de la rédaction d’un cahier des charges logiciel  devant intégrer
-le système documentaire dans le cadre du projet COPEVUE-MONIT
+le système documentaire dans le cadre du projet COPEVUE-MONIT}
+\etat{validé} %draft, non relu, non validé, validé
 
+\begin{document}
 
-\bigskip
+\maketitle
 
-\subsubsection[1. Définitions]{1. Définitions}
+\begin{historique}
+    \histo{1.0}{16/01/2012}{Draft initial}
+    \histo{1.1}{23/01/2012}{Évolution du document}
+    \histo{1.2}{30/01/2012}{Finalisation}
+    \histo{1.3}{30/01/2012}{Validation}
+\end{historique}
+
+\newpage
+
+\tableofcontents
+
+\section[Définitions]{Définitions}
 Un cahier des charges sert de base à la rédaction des clauses
 contractuelles techniques, de qualité et des réception à partir
 desquelles le réalisateur proposera les spécifications fonctionnelles
 du logiciel.
-
-
-\bigskip
 
 Les objectifs d{\textquotesingle}un cahier des charges logiciel sont :
 
@@ -60,51 +64,36 @@ performance, interfaces avec d{\textquotesingle}autres systèmes, ...),
 de développement.
 \end{itemize}
 
-\bigskip
 
-\subsubsection[2. Documents de référence]{2. Documents de référence}
+\section[Documents de référence]{Documents de référence}
 GLOSSAIRE / Glossaire qualité
 
 QUALITE / Gestion de la documentation
 
-
-\bigskip
-
-\subsubsection[3. Méthodologie de rédaction]{3. Méthodologie de
+\section[Méthodologie de rédaction]{Méthodologie de
 rédaction}
 
-\bigskip
 
-\paragraph[\ \ 3.1. Processus d’élaboration du cahier des
-charges]{\ \ 3.1. Processus d’élaboration du cahier des charges}
+\subsection[Processus d’élaboration du cahier des
+charges]{Processus d’élaboration du cahier des charges}
 
 \includegraphics[width=8.308cm,height=13.6cm]{BP22020Aide20C3A020la20rC3A9daction20dun20CdC20Logiciel-img1.png}
 
-
-
-\bigskip
-
-
-\bigskip
-
-\paragraph[\ \ 3.2. Etablissement d’un cahier des charges et choix d’un
-fournisseur]{\ \ 3.2. Etablissement d’un cahier des charges et choix
+\subsection[Etablissement d’un cahier des charges et choix d’un
+fournisseur]{Etablissement d’un cahier des charges et choix
 d’un fournisseur}
 
-\bigskip
 
 
 \includegraphics[width=10.663cm,height=15.081cm]{BP22020Aide20C3A020la20rC3A9daction20dun20CdC20Logiciel-img2.png}
 
 
 
-\bigskip
 
-\subsubsection[4. Contenu d’un Cahier des Charges]{4. Contenu d’un
+\section[Contenu d’un Cahier des Charges]{Contenu d’un
 Cahier des Charges}
-\paragraph[\ \ 4.1. Plan Type]{\ \ 4.1. Plan Type}
+\subsection[Plan Type]{4.1. Plan Type}
 
-\bigskip
 
 \begin{flushleft}
 \tablehead{}
@@ -180,17 +169,13 @@ moyens
 \end{supertabular}
 \end{flushleft}
 
-\bigskip
 
-\paragraph[4.2. Introduction]{4.2. Introduction}
+\subsection[Introduction]{Introduction}
 Cette partie a pour but de présenter le projet / logiciel, ainsi que de
 préciser les documents de références nécessaires à la bonne
 compréhension du document.
 
-
-\bigskip
-
-\paragraph[4.3. Présentation du problème]{4.3. Présentation du problème}
+\subsection[Présentation du problème]{Présentation du problème}
 Expression des besoins à satisfaire pour le logiciel :
 
 \begin{itemize}
@@ -201,26 +186,15 @@ maintenance
 \item Limites du projet
 \end{itemize}
 
-\bigskip
-
-\paragraph[4.4. Exigences fonctionnelles]{4.4. Exigences fonctionnelles}
+\subsection[Exigences fonctionnelles]{Exigences fonctionnelles}
 Propriétés spécifiques du logiciel, cycle de vie et modèles
 organisationnels des traitements et des données qu’il contient.
-
-
-\bigskip
 
 Les fonctionnalités sont triées par ordre de priorité : plus une
 fonction est importante et critique pour le logiciel, plus cette
 fonction est placée vers le haut.
 
-
-\bigskip
-
 Exemple d’un tableau descriptif d’une fonctionnalité :
-
-
-\bigskip
 
 \begin{flushleft}
 \tablehead{}
@@ -241,22 +215,14 @@ fonction{\textgreater}\\\hline
 \end{supertabular}
 \end{flushleft}
 
-\bigskip
-
-
-\bigskip
-
-\paragraph[4.4. Exigences non fonctionnelles]{4.4. Exigences non
+\subsection[Exigences non fonctionnelles]{4.4. Exigences non
 fonctionnelles}
 Il s’agit ici de décrire les exigences non fonctionnelles du logiciel.
 Il s’agit de choisir les critères non fonctionnels (ERGONOMIE,
 FIABILITÉ, …) nécessaires pour satisfaire les besoins non fonctionnels
 utilisateurs.
 
-
-\bigskip
-
-\paragraph[\ \ 4.5. Contraintes imposées]{\ \ 4.5. Contraintes imposées}
+\subsection[Contraintes imposées]{Contraintes imposées}
 Environnement du développement du logiciel nécessaire à son élaboration 
 :
 
@@ -269,9 +235,7 @@ technologies nécessaires)
 développement (langage, outils, moyens)
 \end{itemize}
 
-\bigskip
-
-\paragraph[\ \ 4.6. Configuration cible]{\ \ 4.6. Configuration cible}
+\subsection[Configuration cible]{Configuration cible}
 Concerne le matériel et les logiciels à utiliser :
 
 \begin{itemize}
@@ -281,17 +245,12 @@ Concerne le matériel et les logiciels à utiliser :
 \item Interfaces logiciel / matériel, IHM, BDD, API
 \end{itemize}
 
-\bigskip
 
-\paragraph[\ \ 4.7. Grille d’évaluation]{\ \ 4.7. Grille d’évaluation}
+\subsection[Grille d’évaluation]{Grille d’évaluation}
 Evaluation de la description des fonctions proposées par le réalisateur
 par rapport aux fonctions de base du logiciel.\newline
 
-
 Exemple de grille d’évaluation :
-
-
-\bigskip
 
 \begin{flushleft}
 \tablehead{}
@@ -356,11 +315,8 @@ technologiques &
 \end{supertabular}
 \end{flushleft}
 
-\bigskip
+\section[Gestion du document]{Gestion du document}
 
-\subsubsection[5. Gestion du document]{5. Gestion du document}
-
-\bigskip
 
 Le document de type {\textless}{\textless}Cahier des
 Charges{\textgreater}{\textgreater} doit respecter les éléments de

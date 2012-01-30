@@ -1,6 +1,5 @@
-% This file was converted to LaTeX by Writer2LaTeX ver. 1.0.2
-% see http://writer2latex.sourceforge.net for more info
-\documentclass{article}
+
+\documentclass{mise_en_page}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
@@ -9,39 +8,40 @@
 \usepackage{array}
 \usepackage{supertabular}
 \usepackage{hhline}
-\usepackage[pdftex]{graphicx}
 \makeatletter
 \newcommand\arraybslash{\let\\\@arraycr}
 \makeatother
 \setlength\tabcolsep{1mm}
 \renewcommand\arraystretch{1.3}
-\title{}
-\author{}
-\date{}
-\begin{document}
-\section[BEST PRACTICE N°1]{BEST PRACTICE N°1}
-\subsection[Aide à la rédaction d’une procédure]{Aide à la rédaction
-d’une procédure}
 
-\bigskip
-
-
-\bigskip
-
-Objectif de ce document : Définir les règles de rédaction d’une
+\projet{Projet Ingéniérie}
+\equipe{H4314}
+\responsable{Tristan Delizy}
+\redacteurs{Arnaud Lahache} % Optionnel
+\titre{Best Practice 1 : Aide à la rédaction d'une procédure}
+\version{1.3}
+\objet{Ce dossier a pour but de définir les règles de rédaction d’une
 procédure devant intégrer le système documentaire dans le cadre du
-projet COPEVUE-MONIT
+projet COPEVUE-MONIT}
+\etat{validé} %draft, non relu, non validé, validé
 
+\begin{document}
 
-\bigskip
+\maketitle
 
-\subsubsection[1. Définitions]{1. Définitions}
-Procédure : Manière spécifiée d’accomplir une activité
+\begin{historique}
+    \histo{1.0}{16/01/2012}{Draft initial}
+    \histo{1.1}{23/01/2012}{Évolution du document}
+    \histo{1.2}{30/01/2012}{Finalisation}
+    \histo{1.3}{30/01/2012}{Validation}
+\end{historique}
 
-(Cf. ISO 8402)
+\newpage
 
+\tableofcontents
 
-\bigskip
+\section{Définitions}
+\emph{Procédure : Manière spécifiée d’accomplir une activité} (Cf. ISO 8402)
 
 Une procédure écrite comporte généralement :
 
@@ -53,56 +53,34 @@ Une procédure écrite comporte généralement :
 \item comment cela doit  être maîtrisé et  enregistré : COMMENT ?
 \end{itemize}
 
-\bigskip
-
-\subsubsection[2. Documents de référence]{2. Documents de référence}
-
-\bigskip
+\section{Documents de référence}
 
 GLOSSAIRE / Glossaire qualité
 
 QUALITE / Gestion de la documentation
 
 
-\bigskip
-
-\subsubsection[3. Méthodologie de rédaction]{3. Méthodologie de
-rédaction}
-\paragraph[3.1. Mise en oeuvre du QQOQCP]{3.1. Mise en oeuvre du QQOQCP}
+\section{Méthodologie de rédaction}
+\subsection{Mise en oeuvre du QQOQCP}
 Une procédure est un document décrivant une activité spécifique
 (COMMENT?) du système concerné en précisant les responsabilités (QUI ?
 OU? QUAND?)  les interactions entre les services et les moyens (QUOI?)
 requis pour obtenir le résultat prévu (POURQUOI?)
 
-
-\bigskip
-
  \includegraphics[width=12.885cm,height=7.673cm]{BP1-img1.png} 
 
-\paragraph[3.2. Méthode pour rédiger une procédure]{3.2. Méthode pour
+\subsection{Méthode pour
 rédiger une procédure}
 
-\bigskip
-
-\subparagraph[LOGIGRAMME DE RÉDACTION D’UNE PROCÉDURE :]{LOGIGRAMME DE
+\subsubsection[LOGIGRAMME DE RÉDACTION D’UNE PROCÉDURE :]{LOGIGRAMME DE
 RÉDACTION D’UNE PROCÉDURE :}
-
-\bigskip
 
  \includegraphics[width=15.637cm,height=20.535cm]{BP1-img2.png} 
 
-\subsubsection[4. Contenu d’une procédure]{4. Contenu d’une procédure}
-\paragraph[4.1. Présentation]{4.1. Présentation}
+\section[Contenu d’une procédure]{Contenu d’une procédure}
+\subsection[Présentation]{Présentation}
 
-\bigskip
-
-Le document de type
-{\textless}{\textless}Procédure{\textgreater}{\textgreater} doit
-respecter les éléments de structure et de présentation énoncés dans le
-dossier QUALITE / Gestion de la documentation :
-
-
-\bigskip
+Le document de type {\textless}{\textless}Procédure{\textgreater}{\textgreater} doit respecter les éléments de structure et de présentation énoncés dans le dossier QUALITE / Gestion de la documentation :
 
 \begin{flushleft}
 \tablehead{}
@@ -126,34 +104,20 @@ nombre de pages total.\end{itemize}
 \end{supertabular}
 \end{flushleft}
 
-\bigskip
-
-\paragraph[4.2. Objet]{4.2. Objet}
-
-\bigskip
+\subsection[Objet]{Objet}
 
 Avant tout il est important de pouvoir définir l’objet de la procédure :
 il faut pouvoir expliquer la raison d’être du document, ainsi que les
 objectifs qu’elle permet d’atteindre.
 
-
-\bigskip
-
-\paragraph[4.3. Domaine d’application]{4.3. Domaine d’application}
-
-\bigskip
+\subsection[Domaine d’application]{Domaine d’application}
 
 Il s’agit ici de définir le périmètre couvert par la procédure en
 précisant les entrées et sorties identifiées du processus qu’elle
 décrit et de décliner sa place dans le système documentaire qualité en
 précisant ses attachements aux autres documents
 
-
-\bigskip
-
-\paragraph[4.4. Plan type]{4.4. Plan type}
-
-\bigskip
+\subsection[Plan type]{Plan type}
 
 1. Objet
 
@@ -169,38 +133,29 @@ précisant ses attachements aux autres documents
 
 (7. Exemples)
 
-
-\bigskip
-
-\paragraph[4.5. Description des parties à rédiger]{4.5. Description des
+\subsection[Description des parties à rédiger]{Description des
 parties à rédiger}
-\subparagraph[4.5.1. Objet]{4.5.1. Objet}
+\subsubsection[Objet]{Objet}
 Cette section rappelle les raisons du pourquoi de la procédure
 (généralement, les raisons concernant des exigences requises et les
 méthodes à mettre en oeuvre pour maîtriser un processus)
 
-\subparagraph[4.5.2. Documents de référence]{4.5.2. Documents de
+\subsubsection[Documents de référence]{Documents de
 référence}
 Documents nécessaires à la bonne compréhension du document dans son
 intégralité. Par exemple, référence vers d’autres procédures.
 
-\subparagraph[4.5.3. Domaine d’application]{4.5.3. Domaine
+\subsubsection[Domaine d’application]{Domaine
 d’application}
 Cette rubrique indique qui, dans l’organisation, est concerné par cette
 procédure. Délimite également le périmètre couvert par la procédure
 
-\subparagraph[4.5.4. Logigramme de la procédure]{4.5.4. Logigramme de la
+\subsubsection[Logigramme de la procédure]{Logigramme de la
 procédure}
 Le déroulement du processus doit être décrit sous la forme d’un
 logigramme simple mais complet. 
 
-
-\bigskip
-
 Un logigramme doit comporter les éléments suivants :
-
-
-\bigskip
 
 \begin{flushleft}
 \tablehead{}
@@ -232,16 +187,11 @@ document a déjà été rédigé.\\\hline
 \end{supertabular}
 \end{flushleft}
 
-\bigskip
-
 Afin de retrouver un exemple de logigramme, vous pouvez vous référer à
 celui présent dans ce document même, dans la section 3.2. Méthode pour
 rédiger une procédure.
 
-
-\bigskip
-
-\subparagraph[4.5.5. Tableau de définition des actions]{4.5.5. Tableau
+\subsubsection[Tableau de définition des actions]{Tableau
 de définition des actions}
 Pour chaque action identifiée dans le logigramme, nous allons les
 décrire plus précisément afin d’identifier très clairement l’activité
@@ -251,7 +201,7 @@ numéro de l’action, son intitulé, sa description complète ainsi que les
 documents impliqués dans l’élaboration de l’activité.
 
 
-\bigskip
+
 
 Un tel tableau se présente sous la forme :
 
@@ -279,9 +229,9 @@ Document 2\\\hline
 \end{supertabular}
 \end{flushleft}
 
-\bigskip
 
-\subparagraph[4.5.6. Outils nécessaires]{4.5.6. Outils nécessaires}
+
+\subsubsection[Outils nécessaires]{Outils nécessaires}
 Liste des outils nécessaires afin d’effectuer la procédure. Dans cette
 partie, le rédacteur peut présenter les différents outils qu’il
 recommande d’utiliser afin de compléter la procédure dans son
@@ -293,14 +243,14 @@ Si l’on désire en savoir plus sur l’installation ou l’utilisation de ces
 outils, on pourra les présenter plus en détail en annexe de la
 procédure.
 
-\subparagraph[4.5.7. Exemples]{4.5.7. Exemples}
+\subsubsection[Exemples]{Exemples}
 Si la procédure mérite une illustration, il est possible de présenter un
 exemple présentant le résultat final d’un document respectant les
 différentes étapes de la procédure.
 
-\subsubsection[5. Gestion du document]{5. Gestion du document}
+\section[Gestion du document]{Gestion du document}
 
-\bigskip
+
 
 Le document de type
 {\textless}{\textless}Procédure{\textgreater}{\textgreater} doit
