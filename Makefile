@@ -5,6 +5,7 @@ all:
 	cd QL/BP2; make
 	cd QL/GDOC; make
 	cd QL/PAQP; make
+	cd QL/SYNTHESE; make
 
 clean:
 	cd AE; make clean
@@ -13,6 +14,7 @@ clean:
 	cd QL/BP2; make clean
 	cd QL/GDOC; make clean
 	cd QL/PAQP; make clean
+	cd QL/SYNTHESE; make clean
 
 mrproper:
 	cd AE; make mrproper
@@ -21,3 +23,4 @@ mrproper:
 	cd QL/BP2; make mrproper
 	cd QL/GDOC; make mrproper
 	cd QL/PAQP; make mrproper
+	cd QL/SYNTHESE; make mrproper
