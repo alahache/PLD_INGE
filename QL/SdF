@@ -1,0 +1,13 @@
+SdF : Sûreté de Fonctionnement
+
+FIABILITE
+	-> Par rapports aux Bugs (erreurs)
+	-> Rapport temps de fonctionnement / temps de maintenance
+DISPONIBILITE
+	-> 24h/24h / Pannes, etc.
+MAINTENABILITE
+	-> Rapidité de maintenance
+SECURITE
+	Intégrité des données
+	...
+
